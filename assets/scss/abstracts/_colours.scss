@@ -1,0 +1,67 @@
+$dark-blue: #2C3B58;
+$darker-blue: #283247;
+$slate-blue: #4F5A68;
+$gray-blue: #818CA3;
+$pale-blue: #F2F5FA;
+$accent-blue: #2D9CDB;
+$accent-blue-dark: #2a90cc;
+$slate-gray: #656565;
+$gray: #828282;
+$pale-gray: #CCD2E3;
+$red: #E98E8E;
+$red-dark: #EB5757;
+$red-pale: #e98e8e26;
+$orange: #EE851F;
+$orange-pale: #ee851f26;;
+$green: #27AE60;
+$green-pale: #5aba5e26;
+$green-dark: #1a954d;
+
+
+// custom colours map
+$custom-colours: (
+  dark-blue: $dark-blue,
+  darker-blue: $darker-blue,
+  slate-blue: $slate-blue,
+  gray-blue: $gray-blue,
+  pale-blue: $pale-blue,
+  accent-blue: $accent-blue,
+  accent-blue-dark: $accent-blue-dark,
+  slate-gray: $slate-gray,
+  pale-gray: $pale-gray,
+  gray: $gray,
+  red: $red,
+  dark-red: $red-dark,
+  pale-red: $red-pale,
+  orange: $orange,
+  pale-orange: $orange-pale,
+  green: $green,
+  pale-green: $green-pale,
+  dark-green: $green-dark,
+);
+
+// mixin that generates custom colour utility classes
+@mixin custom-color-classes {
+  @each $name, $hex in $custom-colours {
+    &-#{$name} {
+      color: $hex;
+    }
+  }
+}
+
+// mixin that generates background colour utility classes
+@mixin custom-bg-color-classes {
+  @each $name, $hex in $custom-colours {
+    &-#{$name} {
+      background-color: $hex;
+    }
+  }
+}
+
+.text, .c {
+  @include custom-color-classes;
+}
+
+.bg{
+  @include custom-bg-color-classes;
+}

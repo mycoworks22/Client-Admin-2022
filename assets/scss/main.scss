@@ -1,0 +1,18 @@
+@import "abstracts/colours";
+@import "abstracts/fonts";
+@import "abstracts/borders";
+
+//important to be imported here after the fonts
+@import "../bootstrap/scss/bootstrap.scss";
+
+@import "abstracts/base";
+
+@import "components/btns";
+
+@import "layout-and-sections/body-wrap";
+@import "layout-and-sections/content-wrap";
+@import "layout-and-sections/top-nav";
+@import "layout-and-sections/side-nav";
+@import "layout-and-sections/dashboard-page";
+@import "layout-and-sections/companies-page";
+@import "layout-and-sections/single-company-page";
