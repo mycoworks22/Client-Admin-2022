@@ -1,0 +1,232 @@
+.side-nav{
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  transition: width 0.2s ease-in-out;
+
+  #side-nav-burger-wrap{
+    padding: 33px 0 34px 0;
+    border-bottom: 1px solid $darker-blue;
+
+    #side-nav-burger{
+      width: 26px;
+      height: 24px;
+      cursor: pointer;
+
+      .burger-line{
+        height: 2px;
+        background-color: white;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        width: 26px;
+
+        &--2{
+          background-color: $accent-blue;
+        }
+
+      }
+
+      &:hover{
+        .burger-line{
+          background-color: $accent-blue;
+        }
+      }
+    }
+  }
+
+  #side-nav-scrollable-wrap{
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    align-items: center;
+    justify-items: start;
+
+    // style scrollbar for FireFox
+    scrollbar-color: $dark-blue $dark-blue;
+    scrollbar-width: thin;
+
+     // style scrollbar for Safari, Chrome and Opera
+    &::-webkit-scrollbar { width: 0 !important }
+  }
+
+  #side-nav-links-list{
+    width: 100%;
+    list-style: none;
+
+    .side-nav-link{
+      transition: padding 0.2s ease-in-out;
+      a{
+        text-decoration: none;
+        width: 100%;
+        height: 40px;
+        white-space: nowrap;
+      }
+
+      &--active{
+        background-color: $darker-blue;
+        background: linear-gradient(90.03deg, #25334E 63.12%, rgba(37, 51, 78, 0) 99.98%);
+        position: relative;
+
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 40px;
+          width: 3.5px;
+          background-color: $accent-blue;
+          box-shadow: 1px 0px 6px rgba(45, 156, 219, 0.8);
+        }
+      }
+    }
+  }
+
+  #side-nav-help{
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, margin 0.2s ease-in-out ;
+
+    #side-nav-help-inner-wrap{
+      display: grid;
+      grid-template-columns: 51px 131px;
+      grid-template-rows: 51px max-content max-content;
+    }
+
+    #side-nav-help-question{
+      display: block;
+      width: 35px;
+      height: 35px;
+      border-radius: 10px;
+      text-decoration: none;
+
+      .material-symbols-outlined {
+        color: white;
+        background-color: $accent-blue;
+        border-radius: 50%;
+      }
+    }
+
+    #side-nav-help-chat{
+      justify-self: end;
+
+      font-size: 12px;
+      white-space: nowrap;
+
+      i{
+        position: relative;
+        top: 4px;
+      }
+    }
+
+    #side-nav-help-text{
+      grid-column: 1 / span 2;
+      white-space: nowrap;
+    }
+
+    #side-nav-help-doc{
+      grid-column: 1 / span 2;
+
+      border-radius: 12px;
+      white-space: nowrap;
+
+      &:hover{
+        color: $accent-blue;
+      }
+    }
+  }
+
+  #side-nav-payment{
+    width: 214px;
+  }
+
+  &--opened{
+    width: 310px;
+
+    #side-nav-links-list{
+      .side-nav-heading, .side-nav-link{
+        padding: 0 48px;
+      }
+    }
+
+    #side-nav-help{
+      width: 214px;
+      height: 180px;
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+  }
+
+  &--closed{
+    width: 107px;
+
+    #side-nav-burger-wrap{
+      #side-nav-burger{
+        width: 30px;
+        .burger-line{
+          &--1{
+            width: 15px;
+            transform: rotate(45deg);
+            top: 6.25px;
+            right: -19px;
+          }
+
+          &--2{
+            background-color: white;
+            width: 30px;
+          }
+
+          &--3{
+            width: 15px;
+            transform: rotate(-45deg);
+            top: -6.25px;
+            right: -19px;
+          }
+        }
+      }
+    }
+
+    #side-nav-links-list{
+      .side-nav-heading{
+        padding: 0 0px;
+        text-align: center;
+      }
+
+      .side-nav-link{
+        padding: 0 37px;
+
+        &__text{
+          display: none;
+        }
+      }
+
+    }
+
+    #side-nav-help{
+      width: 67px;
+      height: 67px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      #side-nav-help-chat{
+        display: none;
+      }
+
+      #side-nav-help-text{
+        display: none;
+      }
+
+      #side-nav-help-doc{
+        display: none;
+      }
+    }
+
+    #side-nav-payment{
+      display: none;
+    }
+  }
+
+}
