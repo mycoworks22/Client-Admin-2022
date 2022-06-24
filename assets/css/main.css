@@ -11443,6 +11443,12 @@ body {
   display: block;
   width: 270px;
 }
+@media screen and (max-width: 1450px) {
+  #top-nav-wrap #top-nav-logo img {
+    display: block;
+    width: 200px;
+  }
+}
 #top-nav-wrap #top-nav-links a:not(:last-child) {
   margin-right: 40px;
 }
@@ -11694,6 +11700,18 @@ body {
 .side-nav--closed #side-nav-payment {
   display: none;
 }
+@media screen and (max-width: 1300px) {
+  .side-nav--opened {
+    width: 260px;
+  }
+  .side-nav--opened #side-nav-links-list .side-nav-heading, .side-nav--opened #side-nav-links-list .side-nav-link {
+    padding: 0 23px;
+  }
+  .side-nav--opened #side-nav-help {
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+}
 
 #dashboard-cover-wrap .col-12 {
   padding-bottom: 35px;
@@ -11845,51 +11863,53 @@ body {
   grid-row: 1/span 1;
   justify-self: start;
 }
-#companies-list-wrap .companies-list-header__renew {
-  grid-column: 2/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__office {
-  grid-column: 3/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__status {
-  grid-column: 4/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__tas {
-  grid-column: 5/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__roa {
-  grid-column: 6/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__dsa {
-  grid-column: 7/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__vba {
-  grid-column: 8/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__messages {
-  grid-column: 9/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__mail {
-  grid-column: 10/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__cf {
-  grid-column: 11/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap .companies-list-header__drop-down {
-  grid-column: 12/span 1;
-  grid-row: 1/span 1;
-}
 @media screen and (max-width: 1450px) {
+  #companies-list-wrap .companies-list-header {
+    grid-template-columns: 90px 70px 104px 35px 35px 35px 35px 70px 35px 140px !important;
+    justify-items: center !important;
+    align-items: start !important;
+    justify-content: space-between;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  #companies-list-wrap .companies-list-header__name {
+    display: none !important;
+  }
+  #companies-list-wrap .companies-list-header__renew {
+    grid-column: 1/span 1;
+  }
+  #companies-list-wrap .companies-list-header__office {
+    grid-column: 2/span 1;
+  }
+  #companies-list-wrap .companies-list-header__status {
+    grid-column: 3/span 1;
+  }
+  #companies-list-wrap .companies-list-header__tas {
+    grid-column: 4/span 1;
+  }
+  #companies-list-wrap .companies-list-header__roa {
+    grid-column: 5/span 1;
+  }
+  #companies-list-wrap .companies-list-header__dsa {
+    grid-column: 6/span 1;
+  }
+  #companies-list-wrap .companies-list-header__vba {
+    grid-column: 7/span 1;
+  }
+  #companies-list-wrap .companies-list-header__messages {
+    grid-column: 8/span 1;
+  }
+  #companies-list-wrap .companies-list-header__mail {
+    grid-column: 9/span 1;
+  }
+  #companies-list-wrap .companies-list-header__cf {
+    grid-column: 10/span 1;
+  }
+  #companies-list-wrap .companies-list-header__drop-down {
+    grid-column: 11/span 1;
+  }
+}
+@media screen and (max-width: 1100px) {
   #companies-list-wrap .companies-list-header {
     display: none !important;
   }
@@ -11904,6 +11924,9 @@ body {
        column-gap: 20px;
   align-items: center;
   justify-items: center;
+}
+#companies-list-wrap #companies-list .company .label {
+  display: none;
 }
 #companies-list-wrap #companies-list .company::after {
   content: "";
@@ -11922,21 +11945,7 @@ body {
   background-color: #E98E8E;
 }
 #companies-list-wrap #companies-list .company__name {
-  grid-column: 1/span 1;
-  grid-row: 1/span 1;
   justify-self: start;
-}
-#companies-list-wrap #companies-list .company__renew {
-  grid-column: 2/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap #companies-list .company__office {
-  grid-column: 3/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap #companies-list .company__status {
-  grid-column: 4/span 1;
-  grid-row: 1/span 1;
 }
 #companies-list-wrap #companies-list .company__status .status-active {
   border: 1px solid rgba(90, 186, 94, 0.3);
@@ -11947,25 +11956,7 @@ body {
 #companies-list-wrap #companies-list .company__status .status-suspended {
   border: 1px solid rgba(233, 142, 142, 0.3);
 }
-#companies-list-wrap #companies-list .company__tas {
-  grid-column: 5/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap #companies-list .company__roa {
-  grid-column: 6/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap #companies-list .company__dsa {
-  grid-column: 7/span 1;
-  grid-row: 1/span 1;
-}
-#companies-list-wrap #companies-list .company__vba {
-  grid-column: 8/span 1;
-  grid-row: 1/span 1;
-}
 #companies-list-wrap #companies-list .company__messages {
-  grid-column: 9/span 1;
-  grid-row: 1/span 1;
   position: relative;
 }
 #companies-list-wrap #companies-list .company__messages p {
@@ -11980,8 +11971,6 @@ body {
   border: 1.5px solid white;
 }
 #companies-list-wrap #companies-list .company__mail {
-  grid-column: 10/span 1;
-  grid-row: 1/span 1;
   position: relative;
 }
 #companies-list-wrap #companies-list .company__mail p {
@@ -11995,20 +11984,84 @@ body {
   align-items: center;
   border: 1.5px solid white;
 }
-#companies-list-wrap #companies-list .company__cf {
-  grid-column: 11/span 1;
-  grid-row: 1/span 1;
-}
 #companies-list-wrap #companies-list .company__drop-down {
   grid-column: 12/span 1;
-  grid-row: 1/span 1;
+  justify-self: end;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1450px) {
+  #companies-list-wrap #companies-list .company {
+    grid-template-columns: 90px 70px 104px 35px 35px 35px 35px 70px 35px 140px !important;
+    justify-items: center !important;
+    align-items: center !important;
+    justify-content: space-between;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 20px;
+  }
+  #companies-list-wrap #companies-list .company__name {
+    grid-column: 1/span 9;
+    grid-row: 1/span 1;
+    justify-self: start;
+  }
+  #companies-list-wrap #companies-list .company__name p {
+    font-weight: 500;
+  }
+  #companies-list-wrap #companies-list .company__renew {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    justify-self: start;
+  }
+  #companies-list-wrap #companies-list .company__office {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__status {
+    grid-column: 3/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__tas {
+    grid-column: 4/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__roa {
+    grid-column: 5/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__dsa {
+    grid-column: 6/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__vba {
+    grid-column: 7/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__messages {
+    grid-column: 8/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__mail {
+    grid-column: 9/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__cf {
+    grid-column: 10/span 1;
+    grid-row: 2/span 1;
+  }
+  #companies-list-wrap #companies-list .company__drop-down {
+    grid-column: 10/span 1;
+    grid-row: 1/span 1;
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 1100px) {
   #companies-list-wrap #companies-list .company {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
     justify-items: start !important;
     align-items: start !important;
     row-gap: 30px;
+  }
+  #companies-list-wrap #companies-list .company .label {
+    display: block;
   }
   #companies-list-wrap #companies-list .company__name {
     grid-column: 1/span 10;
@@ -12027,9 +12080,17 @@ body {
     grid-row: 2/span 1;
   }
   #companies-list-wrap #companies-list .company__status {
-    grid-column: 8/span 4;
+    grid-column: 9/span 4;
     grid-row: 2/span 1;
     align-self: center;
+  }
+  #companies-list-wrap #companies-list .company__status p {
+    padding: 0 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
   #companies-list-wrap #companies-list .company__tas {
     grid-column: 1/span 2;
@@ -12059,7 +12120,8 @@ body {
     grid-column: 9/span 4;
     grid-row: 3/span 1;
   }
-  #companies-list-wrap #companies-list .company__cf p {
+  #companies-list-wrap #companies-list .company__cf a {
+    text-align: left !important;
     width: 100%;
   }
   #companies-list-wrap #companies-list .company__drop-down {

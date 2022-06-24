@@ -97,62 +97,63 @@
       justify-self: start;
     }
 
-    &__renew{
-      grid-column: 2 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__office{
-      grid-column: 3 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__status{
-      grid-column: 4 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__tas{
-      grid-column: 5 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__roa{
-      grid-column: 6 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__dsa{
-      grid-column: 7 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__vba{
-      grid-column: 8 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__messages{
-      grid-column: 9 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__mail{
-      grid-column: 10 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__cf{
-      grid-column: 11 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    &__drop-down{
-      grid-column: 12 / span 1;
-      grid-row: 1 / span 1;
-    }
-
     @media screen and (max-width: 1450px){
+      grid-template-columns: 90px 70px 104px 35px 35px 35px 35px 70px 35px 140px !important;
+      justify-items: center !important;
+      align-items: start !important;
+      justify-content: space-between;
+      column-gap: 10px;
+
+      &__name{
+        display: none !important;
+      }
+
+      &__renew{
+        grid-column: 1 / span 1;
+      }
+
+      &__office{
+        grid-column: 2 / span 1;
+      }
+
+      &__status{
+        grid-column: 3 / span 1;
+      }
+
+      &__tas{
+        grid-column: 4 / span 1;
+      }
+
+      &__roa{
+        grid-column: 5 / span 1;
+      }
+
+      &__dsa{
+        grid-column: 6 / span 1;
+      }
+
+      &__vba{
+        grid-column: 7 / span 1;
+      }
+
+      &__messages{
+        grid-column: 8 / span 1;
+      }
+
+      &__mail{
+        grid-column: 9 / span 1;
+      }
+
+      &__cf{
+        grid-column: 10 / span 1;
+      }
+
+      &__drop-down{
+        grid-column: 11 / span 1;
+      }
+    }
+
+    @media screen and (max-width: 1100px){
       display: none !important;
     }
   }
@@ -169,6 +170,10 @@
       column-gap: 20px;
       align-items: center;
       justify-items: center;
+
+      .label{
+        display: none;
+      }
 
       &::after{
         content: "";
@@ -197,25 +202,10 @@
       }
 
       &__name{
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
         justify-self: start;
       }
 
-      &__renew{
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1;
-      }
-
-      &__office{
-        grid-column: 3 / span 1;
-        grid-row: 1 / span 1;
-      }
-
       &__status{
-        grid-column: 4 / span 1;
-        grid-row: 1 / span 1;
-
         .status-active{
           border: 1px solid rgba(90, 186, 94, 0.3);
         }
@@ -228,30 +218,7 @@
         }
       }
 
-      &__tas{
-        grid-column: 5 / span 1;
-        grid-row: 1 / span 1;
-      }
-
-      &__roa{
-        grid-column: 6 / span 1;
-        grid-row: 1 / span 1;
-      }
-
-      &__dsa{
-        grid-column: 7 / span 1;
-        grid-row: 1 / span 1;
-      }
-
-      &__vba{
-        grid-column: 8 / span 1;
-        grid-row: 1 / span 1;
-      }
-
       &__messages{
-        grid-column: 9 / span 1;
-        grid-row: 1 / span 1;
-
         position: relative;
 
         p{
@@ -268,9 +235,6 @@
       }
 
       &__mail{
-        grid-column: 10 / span 1;
-        grid-row: 1 / span 1;
-
         position: relative;
 
         p{
@@ -286,21 +250,96 @@
         }
       }
 
-      &__cf{
-        grid-column: 11 / span 1;
-        grid-row: 1 / span 1;
-      }
-
       &__drop-down{
         grid-column: 12 / span 1;
-        grid-row: 1 / span 1;
+        justify-self: end;
       }
 
-      @media screen and (max-width: 1050px){
+      @media screen and (max-width: 1450px){
+        grid-template-columns: 90px 70px 104px 35px 35px 35px 35px 70px 35px 140px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between;
+        column-gap: 10px;
+        row-gap: 20px;
+
+        &__name{
+          grid-column: 1 / span 9;
+          grid-row: 1 / span 1;
+          justify-self: start;
+
+          p{
+            font-weight: 500;
+          }
+        }
+
+        &__renew{
+          grid-column: 1 / span 1;
+          grid-row: 2 / span 1;
+          justify-self: start;
+        }
+
+        &__office{
+          grid-column: 2 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__status{
+          grid-column: 3 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__tas{
+          grid-column: 4 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__roa{
+          grid-column: 5 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__dsa{
+          grid-column: 6 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__vba{
+          grid-column: 7 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__messages{
+          grid-column: 8 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__mail{
+          grid-column: 9 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__cf{
+          grid-column: 10 / span 1;
+          grid-row: 2 / span 1;
+        }
+
+        &__drop-down{
+          grid-column: 10 / span 1;
+          grid-row: 1 / span 1;
+          justify-self: end;
+        }
+      }
+
+      @media screen and (max-width: 1100px){
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
         justify-items: start !important;
         align-items: start !important;
         row-gap: 30px;
+
+        .label{
+          display: block;
+        }
 
         &__name{
           grid-column: 1 / span 10;
@@ -323,9 +362,16 @@
         }
 
         &__status{
-          grid-column: 8 / span 4;
+          grid-column: 9 / span 4;
           grid-row: 2 / span 1;
           align-self: center;
+
+          p{
+            padding: 0 0 !important;
+            border: none !important;
+            background-color: transparent !important;
+            width: fit-content !important;
+          }
         }
 
         &__tas{
@@ -361,7 +407,8 @@
         &__cf{
           grid-column: 9 / span 4;
           grid-row: 3 / span 1;
-          p{
+          a{
+            text-align: left !important;
             width: 100%;
           }
         }

@@ -27,15 +27,15 @@
 
 <!-- TOP NAV  -->
 <!-- style in scss/layout-and-sections/_top-nav.scss  -->
-<nav id="top-nav-wrap" class="py-4">
+<nav id="top-nav-wrap" class="py-xxl-4 py-2">
   <div class="container-fluid">
     <div class="row row-max-width">
       <!-- logo  -->
-      <div class="col-auto d-flex align-items-center justify-content-end" id="top-nav-logo">
+      <div class="order-1 col-6 col-xxl-auto d-flex align-items-center justify-content-start" id="top-nav-logo">
         <img src="assets/img/logo-dark.svg" alt="">
       </div>
       <!-- links  -->
-      <div class="col d-flex align-items-center justify-content-end">
+      <div class="order-xxl-2 order-3 col d-flex align-items-center justify-content-xxl-end mt-xxl-0 mt-3">
         <div class="d-flex" id="top-nav-links">
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Upload ID</a>
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Make a Payment</a>
@@ -44,16 +44,13 @@
         </div>
       </div>
       <!-- notifications and profile  -->
-      <div class="col-auto d-flex align-items-center justify-content-end px-3">
-        <div id="top-nav-notifications">
+      <div class="order-xxl-3 order-2 col-6 col-xxl-auto d-flex align-items-center justify-content-end px-3">
+        <div id="top-nav-notifications" class="me-3">
           <a href="#" class="notification-bell">
             <i class="fas fa-bell"></i>
             <span class="notification-bell__indicator"></span>
           </a>
         </div>
-      </div>
-      <!-- account  -->
-      <div class="col-auto d-flex align-items-center justify-content-end">
         <!-- image  -->
         <div id="top-nav-profile-image" class="me-3">
           <img src="assets/img/img2.jpg" alt="">
@@ -65,6 +62,7 @@
           </a>
         </div>
       </div>
+
     </div>
   </div>
 </nav>
@@ -172,7 +170,7 @@
       </div>
     </div>
     <!-- payment & security  -->
-    <div id="side-nav-payment" class="mx-5">
+    <div id="side-nav-payment" class="mx-auto">
       <p class="mb-2 text-white text-center font-inter fs-14">Payment & Security</p>
       <img src="assets/img/payment.svg" class="d-block w-100" alt="">
     </div>

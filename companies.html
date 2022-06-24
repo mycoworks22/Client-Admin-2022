@@ -29,15 +29,15 @@
 
 <!-- TOP NAV  -->
 <!-- style in scss/layout-and-sections/_top-nav.scss  -->
-<nav id="top-nav-wrap" class="py-4">
+<nav id="top-nav-wrap" class="py-xxl-4 py-2">
   <div class="container-fluid">
     <div class="row row-max-width">
       <!-- logo  -->
-      <div class="col-auto d-flex align-items-center justify-content-end" id="top-nav-logo">
+      <div class="order-1 col-6 col-xxl-auto d-flex align-items-center justify-content-start" id="top-nav-logo">
         <img src="assets/img/logo-dark.svg" alt="">
       </div>
       <!-- links  -->
-      <div class="col d-flex align-items-center justify-content-end">
+      <div class="order-xxl-2 order-3 col d-flex align-items-center justify-content-xxl-end mt-xxl-0 mt-3">
         <div class="d-flex" id="top-nav-links">
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Upload ID</a>
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Make a Payment</a>
@@ -46,16 +46,13 @@
         </div>
       </div>
       <!-- notifications and profile  -->
-      <div class="col-auto d-flex align-items-center justify-content-end px-3">
-        <div id="top-nav-notifications">
+      <div class="order-xxl-3 order-2 col-6 col-xxl-auto d-flex align-items-center justify-content-end px-3">
+        <div id="top-nav-notifications" class="me-3">
           <a href="#" class="notification-bell">
             <i class="fas fa-bell"></i>
             <span class="notification-bell__indicator"></span>
           </a>
         </div>
-      </div>
-      <!-- account  -->
-      <div class="col-auto d-flex align-items-center justify-content-end">
         <!-- image  -->
         <div id="top-nav-profile-image" class="me-3">
           <img src="assets/img/img2.jpg" alt="">
@@ -67,6 +64,7 @@
           </a>
         </div>
       </div>
+
     </div>
   </div>
 </nav>
@@ -174,7 +172,7 @@
       </div>
     </div>
     <!-- payment & security  -->
-    <div id="side-nav-payment" class="mx-5">
+    <div id="side-nav-payment" class="mx-auto">
       <p class="mb-2 text-white text-center font-inter fs-14">Payment & Security</p>
       <img src="assets/img/payment.svg" class="d-block w-100" alt="">
     </div>
@@ -193,14 +191,14 @@
   <section class="container-fluid mb-5 pb-2">
     <div class="row row-max-width">
       <!-- page title  -->
-      <div class="col d-flex align-items-center">
+      <div class="col-12 col-xxl d-flex align-items-center mb-xxl-0 mb-4">
         <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
           Your companies
         </h1>
       </div>
       <!-- search companies  -->
       <!-- js in js/companies-live-search.js   -->
-      <div class="col-auto">
+      <div class="col col-xxl-auto">
         <div id="search-companies">
           <input type="text" id="search-companies-input" placeholder="Search..." >
           <i class="fas fa-search text-slate-gray"></i>
@@ -315,6 +313,9 @@
               </p>
             </div>
             <div class="company__status w-100">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                STATUS:
+              </p>
               <p class="status-active text-green font-rubik fs-14 text-center lh-lg rounded-6px bg-pale-green mb-0">Active</p>
             </div>
             <div class="company__tas">
@@ -371,28 +372,49 @@
               </p>
             </div>
             <div class="company__renew">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                RENEW:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 09-11-2021
               </p>
             </div>
             <div class="company__office">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                OFFICE:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 W1W5PE
               </p>
             </div>
             <div class="company__status w-100">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                STATUS:
+              </p>
               <p class="status-active text-green font-rubik fs-14 text-center lh-lg rounded-6px bg-pale-green mb-0">Active</p>
             </div>
             <div class="company__tas">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                TAS:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__roa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                ROA:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__dsa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                DSA:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__vba">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                VBA:
+              </p>
               <span class="material-icons fs-15 text-red bg-pale-red p-1 rounded-circle">close</span>
             </div>
             <div class="company__messages">
@@ -404,6 +426,9 @@
               <p class="company-mail-number font-rubik fs-10 fw-500 lh-100 text-white bg-accent-blue mb-0 rounded-circle">3</p>
             </div>
             <div class="company__cf">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                CF:
+              </p>
               <a href="#" class="text-red text-center font-rubik fs-13 mb-0 d-block">
                 Start Company Formation
               </a>
@@ -422,28 +447,49 @@
               </p>
             </div>
             <div class="company__renew">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                RENEW:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 09-11-2021
               </p>
             </div>
             <div class="company__office">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                OFFICE:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 W1W5PE
               </p>
             </div>
             <div class="company__status w-100">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                STATUS:
+              </p>
               <p class="status-pending text-orange font-rubik fs-14 text-center lh-lg rounded-6px bg-pale-orange mb-0">Pending</p>
             </div>
             <div class="company__tas">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                TAS:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__roa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                ROA:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__dsa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                DSA:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__vba">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                VBA:
+              </p>
               <span class="material-icons fs-15 text-red bg-pale-red p-1 rounded-circle">close</span>
             </div>
             <div class="company__messages">
@@ -455,6 +501,9 @@
               <p class="company-mail-number font-rubik fs-10 fw-500 lh-100 text-white bg-accent-blue mb-0 rounded-circle">2</p>
             </div>
             <div class="company__cf">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                CF:
+              </p>
               <a href="#" class="text-orange text-decoration-none text-center font-rubik fs-14 mb-0 d-block">
                 Edit <span class="material-icons fs-14 ms-2">edit</span>
               </a>
@@ -473,28 +522,49 @@
               </p>
             </div>
             <div class="company__renew">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                RENEW:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 09-11-2021
               </p>
             </div>
             <div class="company__office">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                OFFICE:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 W1W5PE
               </p>
             </div>
             <div class="company__status w-100">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                STATUS:
+              </p>
               <p class="status-suspended text-red font-rubik fs-14 text-center lh-lg rounded-6px bg-pale-red mb-0">Suspended</p>
             </div>
             <div class="company__tas">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                TAS:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__roa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                ROA:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__dsa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                DSA:
+              </p>
               <span class="material-icons fs-15 text-red bg-pale-red p-1 rounded-circle">close</span>
             </div>
             <div class="company__vba">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                VBA:
+              </p>
               <span class="material-icons fs-15 text-red bg-pale-red p-1 rounded-circle">close</span>
             </div>
             <div class="company__messages">
@@ -518,28 +588,49 @@
               </p>
             </div>
             <div class="company__renew">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                RENEW:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 09-11-2021
               </p>
             </div>
             <div class="company__office">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                OFFICE:
+              </p>
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 W1W5PE
               </p>
             </div>
             <div class="company__status w-100">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                STATUS:
+              </p>
               <p class="status-suspended text-red font-rubik fs-14 text-center lh-lg rounded-6px bg-pale-red mb-0">Suspended</p>
             </div>
             <div class="company__tas">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                TAS:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__roa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                ROA:
+              </p>
               <span class="material-icons fs-15 text-green bg-pale-green p-1 rounded-circle">done</span>
             </div>
             <div class="company__dsa">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                DSA:
+              </p>
               <span class="material-icons fs-15 text-red bg-pale-red p-1 rounded-circle">close</span>
             </div>
             <div class="company__vba">
+              <p class="label text-dark-blue fs-12 font-rubik mb-0">
+                VBA:
+              </p>
               <span class="material-icons fs-15 text-red bg-pale-red p-1 rounded-circle">close</span>
             </div>
             <div class="company__messages">

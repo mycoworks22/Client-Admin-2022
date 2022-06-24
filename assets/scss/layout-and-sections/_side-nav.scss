@@ -270,4 +270,21 @@
     }
   }
 
+  @media screen and (max-width: 1300px){
+    &--opened{
+      width: 260px;
+
+      #side-nav-links-list{
+        .side-nav-heading, .side-nav-link{
+          padding: 0 23px;
+        }
+      }
+
+      #side-nav-help{
+        margin-left: 23px;
+        margin-right: 23px;
+      }
+    }
+  }
+
 }
