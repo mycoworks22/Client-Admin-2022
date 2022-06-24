@@ -11546,7 +11546,7 @@ body {
   z-index: 10;
 }
 .side-nav #side-nav-links-list .side-nav-link a span {
-  transition: color 0.5s linear;
+  transition: color 0.3s linear;
 }
 .side-nav #side-nav-links-list .side-nav-link a::before {
   content: "";
@@ -11560,7 +11560,7 @@ body {
   background: linear-gradient(90.03deg, #25334E 63.12%, rgba(37, 51, 78, 0) 99.98%);
   opacity: 0;
   z-index: -1;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 .side-nav #side-nav-links-list .side-nav-link--active::after {
   content: "";
