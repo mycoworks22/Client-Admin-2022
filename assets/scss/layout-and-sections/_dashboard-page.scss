@@ -53,6 +53,18 @@
     }
   }
 
+  @include media-breakpoint-down (sm) {
+    .dashboard-cover{
+      height: 195px;
+    }
+
+    .dashboard-edit{
+      .dashboard-edit-img{
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
 }
 
 #dashboard-profile-information{
@@ -75,6 +87,11 @@
         background-color: $green;
         position: absolute;
         left: 0;
+        top: 0;
+      }
+
+      &__view{
+        max-width: fit-content;
       }
     }
   }

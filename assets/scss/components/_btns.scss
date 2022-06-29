@@ -11,6 +11,8 @@
 
   border-radius: 4px;
 
+  white-space: nowrap;
+
   span{
     line-height: 100%;
   }
@@ -42,6 +44,16 @@
     &:hover{
       background-color: $green-dark;
       color: white;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    &--lg{
+      padding: 12px 14px;
+    }
+
+    &--sm{
+      padding: 12px 14px;
     }
   }
 }

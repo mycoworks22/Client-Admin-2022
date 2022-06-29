@@ -20,4 +20,23 @@
     grid-row: 2 / span 1;
     grid-column: 2 / span 1;
   }
+
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 107px 1fr !important ;
+  }
+
+  @include media-breakpoint-down(sm){
+    grid-template-columns: 1fr !important;
+
+    #top-nav-wrap{
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1 !important;
+    }
+
+    #content-wrap{
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1 !important;
+    }
+  }
 }

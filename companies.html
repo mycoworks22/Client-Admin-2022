@@ -29,15 +29,19 @@
 
 <!-- TOP NAV  -->
 <!-- style in scss/layout-and-sections/_top-nav.scss  -->
-<nav id="top-nav-wrap" class="py-4">
+<nav id="top-nav-wrap" class="py-3">
   <div class="container-fluid">
     <div class="row row-max-width">
+      <!-- mobile nav btn  -->
+      <div class="col-auto d-flex d-sm-none align-items-center">
+        <span class="material-icons text-accent-blue fs-1" id="top-nav-burger">menu</span>
+      </div>
       <!-- logo  -->
-      <div class="order-1 col-6 col-xxl-auto d-flex align-items-center justify-content-start" id="top-nav-logo">
+      <div class="col col-xl-auto d-flex align-items-center justify-content-center justify-content-sm-start" id="top-nav-logo">
         <img src="assets/img/logo-dark.svg" alt="">
       </div>
       <!-- links  -->
-      <div class="order-xxl-2 order-3 col  d-xxl-flex d-none align-items-center justify-content-xxl-end mt-xxl-0 mt-3">
+      <div class="col d-xl-flex d-none align-items-center justify-content-end mt-0">
         <div class="d-flex" id="top-nav-links">
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Upload ID</a>
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Make a Payment</a>
@@ -46,7 +50,7 @@
         </div>
       </div>
       <!-- notifications and profile  -->
-      <div class="order-xxl-3 order-2 col-6 col-xxl-auto d-flex align-items-center justify-content-end px-3">
+      <div class="col-auto col-sm-6 col-xl-auto d-flex align-items-center justify-content-end px-3">
         <div id="top-nav-notifications" class="me-3">
           <a href="#" class="notification-bell">
             <i class="fas fa-bell"></i>
@@ -54,7 +58,7 @@
           </a>
         </div>
         <!-- image  -->
-        <div id="top-nav-profile-image" class="me-3">
+        <div id="top-nav-profile-image" class="me-3 d-sm-block d-none">
           <img src="assets/img/img2.jpg" alt="">
         </div>
         <!-- account drop down  -->
@@ -73,41 +77,48 @@
 <!-- SIDE NAV  -->
 <!-- style in scss/layout-and-sections/_side-nav.scss  -->
 <nav id="side-nav" class="side-nav side-nav--opened bg-dark-blue">
+
   <!-- open/close button  -->
   <div id="side-nav-burger-wrap">
-    <div id="side-nav-burger" class="mx-auto d-flex flex-column justify-content-between">
+    <!-- button to open close / nav on larger screen  -->
+    <div id="side-nav-burger" class="mx-auto d-none d-sm-flex flex-column justify-content-between">
       <div class="burger-line burger-line--1"></div>
       <div class="burger-line burger-line--2"></div>
       <div class="burger-line burger-line--3"></div>
     </div>
+    <!-- button to slide in nav on small screen  -->
+    <div id="side-nav-burger-mobile" class="d-flex d-sm-none justify-content-center">
+      <span class="material-icons text-white fs-1" >menu</span>
+    </div>
   </div>
+
 
   <!-- contaner with side nav content that is scrollable - this way button will always be visible  -->
   <div id="side-nav-scrollable-wrap" class="mt-3 mb-3">
     <!-- side nav links  -->
     <ul id="side-nav-links-list" class="p-0 mb-0">
-      <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 d-block d-xxl-none">
+      <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 d-block d-xl-none mt-4">
         Quick Links
       </li>
-      <li class="side-nav-link mb-2 d-block d-xxl-none">
+      <li class="side-nav-link mb-2 d-block d-xl-none">
         <a href="#" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">fingerprint</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Upload ID</span>
         </a>
       </li>
-      <li class="side-nav-link mb-2 d-block d-xxl-none">
+      <li class="side-nav-link mb-2 d-block d-xl-none">
         <a href="#" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">credit_card</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Make a Payment</span>
         </a>
       </li>
-      <li class="side-nav-link mb-2 d-block d-xxl-none">
+      <li class="side-nav-link mb-2 d-block d-xl-none">
         <a href="#" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">location_city</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Our Offices</span>
         </a>
       </li>
-      <li class="side-nav-link mb-2 d-block d-xxl-none">
+      <li class="side-nav-link mb-2 d-block d-xl-none">
         <a href="#" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">forum</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Live Chat</span>
@@ -128,7 +139,7 @@
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Account</span>
         </a>
       </li>
-      <li class="side-nav-link side-nav-link--active mb-2">
+      <li class="side-nav-link side-nav-link--active  mb-2">
         <a href="companies.html" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Companies</span>
@@ -215,24 +226,24 @@
 
   <!-- PAGE TITLE  -->
   <!-- style in scss/layout-and-sections/_companies-page.scss  -->
-  <section class="container-fluid mb-5 pb-2">
+  <section class="container-fluid pb-2 mb-sm-5 mb-4 ">
     <div class="row row-max-width">
       <!-- page title  -->
-      <div class="col-12 col-xxl d-flex align-items-center mb-xxl-0 mb-4">
+      <div class="col order-1 d-flex align-items-center mb-4 mb-sm-0">
         <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
           Your companies
         </h1>
       </div>
       <!-- search companies  -->
       <!-- js in js/companies-live-search.js   -->
-      <div class="col col-xxl-auto">
+      <div class="col-12 col-xxl-auto order-3 col-xxl-2 d-flex align-items-center mt-xxl-0 mt-sm-5 mt-4">
         <div id="search-companies">
           <input type="text" id="search-companies-input" placeholder="Search..." >
           <i class="fas fa-search text-slate-gray"></i>
         </div>
       </div>
       <!-- add company btn  -->
-      <div class="col-auto">
+      <div class="col-12 col-sm-auto order-2 col-xxl-3 d-flex align-items-center">
         <a href="#" class="btns btns--ac-blue btns--lg">
           <i class="fas fa-plus fs-12 me-4"></i>
           Add Company
@@ -317,7 +328,7 @@
         <!-- companies list  -->
         <div id="companies-list">
 
-          <div class="company company--active px-4 py-3 rounded-6px bg-white mb-2">
+          <div class="company company--active ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 1 MY REALLY LONG COMPANY NAME LTD
@@ -392,7 +403,7 @@
             </div>
           </div>
 
-          <div class="company company--active px-4 py-3 rounded-6px bg-white mb-2">
+          <div class="company company--active ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 2 MY REALLY LONGER COMPANY NAME LTD
@@ -467,7 +478,7 @@
             </div>
           </div>
 
-          <div class="company company--pending px-4 py-3 rounded-6px bg-white mb-2">
+          <div class="company company--pending ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 3 MY REALLY LONGER STILL COMPANY NAME LTD
@@ -542,7 +553,7 @@
             </div>
           </div>
 
-          <div class="company company--suspended px-4 py-3 rounded-6px bg-white mb-2">
+          <div class="company company--suspended ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 4 MY REALLY COMPANY NAME LTD
@@ -608,7 +619,7 @@
             </div>
           </div>
 
-          <div class="company company--suspended px-4 py-3 rounded-6px bg-white mb-2">
+          <div class="company company--suspended ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
               <p class="text-dark-blue fs-14 font-rubik mb-0">
                 5 MY REALLY COMPANY NAME LTD

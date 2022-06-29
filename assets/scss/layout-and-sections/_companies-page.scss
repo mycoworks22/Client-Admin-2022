@@ -1,4 +1,5 @@
 #search-companies{
+  max-width: 100%;
   width: 370px;
   position: relative;
 
@@ -339,6 +340,7 @@
 
         .label{
           display: block;
+          line-height: 18px !important;
         }
 
         &__name{
@@ -364,13 +366,14 @@
         &__status{
           grid-column: 9 / span 4;
           grid-row: 2 / span 1;
-          align-self: center;
+          align-self: center !important;
 
           p{
             padding: 0 0 !important;
             border: none !important;
             background-color: transparent !important;
             width: fit-content !important;
+            line-height: 21px !important;
           }
         }
 
@@ -417,6 +420,60 @@
           grid-column: 11 / span 2;
           grid-row: 1 / span 1;
           justify-self: end;
+        }
+      }
+
+      @media screen and (max-width: 400px){
+        row-gap: 15px;
+
+        .label{
+          font-size: 10px !important;
+          line-height: 16.5px;
+        }
+
+        &::after{
+          width: 4px;
+        }
+
+        &__name{
+          p{
+            font-size: 12px !important;
+          }
+        }
+
+        &__renew{
+          p{
+            font-size: 11px !important;
+          }
+        }
+
+        &__office{
+          p{
+            font-size: 11px !important;
+          }
+        }
+
+        &__status{
+          p{
+            font-size: 11px !important;
+            line-height: 16.5px !important;
+          }
+        }
+
+        &__cf{
+          p{
+            font-size: 11px !important;
+            span{
+              font-size: 11px !important;
+            }
+          }
+
+          a{
+            font-size: 11px !important;
+            span{
+              font-size: 11px !important;
+            }
+          }
         }
       }
     }

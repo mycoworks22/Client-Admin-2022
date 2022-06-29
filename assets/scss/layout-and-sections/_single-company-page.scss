@@ -44,6 +44,12 @@
     align-items: center;
   }
 
+  @include media-breakpoint-down(sm){
+    .table-heading, .table-content{
+      font-size: 14px !important;
+    }
+  }
+
 }
 
 #active-services-wrap{
@@ -61,6 +67,21 @@
       display: block;
       width: 74px;
       border-radius: 4px;
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    .active-service{
+      grid-template-columns: 1fr !important;
+      row-gap: 20px;
+
+      &__img{
+        display: none;
+      }
+
+      p{
+        font-size: 14px !important;
+      }
     }
   }
 }
@@ -85,6 +106,14 @@
     &__info{
       display: flex;
       align-items: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    .order-info{
+      p{
+        font-size: 14px !important;
+      }
     }
   }
 }
