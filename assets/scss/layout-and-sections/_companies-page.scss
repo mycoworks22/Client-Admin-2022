@@ -204,6 +204,12 @@
 
       &__name{
         justify-self: start;
+
+        a{
+          &:hover{
+            color: $accent-blue;
+          }
+        }
       }
 
       &__status{
@@ -269,7 +275,7 @@
           grid-row: 1 / span 1;
           justify-self: start;
 
-          p{
+          a{
             font-weight: 500;
           }
         }
@@ -347,7 +353,7 @@
           grid-column: 1 / span 10;
           grid-row: 1 / span 1;
 
-          p{
+          a{
             font-weight: 500;
           }
         }
@@ -436,7 +442,7 @@
         }
 
         &__name{
-          p{
+          a{
             font-size: 12px !important;
           }
         }

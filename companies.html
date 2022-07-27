@@ -66,6 +66,12 @@
           <a href="#" id="top-nav-drop-down-btn" class="text-dark-blue text-decoration-none font-rubik">
             Joe Bloggs <i class="fas fa-caret-down"></i>
           </a>
+          <div id="top-nav-drop-down-content">
+            <div class="bg-white py-4">
+              <a href="#" class="px-4 py-2 text-decoration-none font-rubik text-slate-blue">My Account</a>
+              <a href="#" class="px-4 py-2 text-decoration-none font-rubik text-slate-blue">Sign out</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -229,25 +235,25 @@
   <section class="container-fluid pb-2 mb-sm-5 mb-4 ">
     <div class="row row-max-width">
       <!-- page title  -->
-      <div class="col order-1 d-flex align-items-center mb-4 mb-sm-0">
+      <div class="col d-flex align-items-center mb-xl-0 mb-5">
         <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
           Your companies
         </h1>
       </div>
-      <!-- search companies  -->
-      <!-- js in js/companies-live-search.js   -->
-      <div class="col-12 col-xxl-auto order-3 col-xxl-2 d-flex align-items-center mt-xxl-0 mt-sm-5 mt-4">
-        <div id="search-companies">
-          <input type="text" id="search-companies-input" placeholder="Search..." >
-          <i class="fas fa-search text-slate-gray"></i>
-        </div>
-      </div>
       <!-- add company btn  -->
-      <div class="col-12 col-sm-auto order-2 col-xxl-3 d-flex align-items-center">
+      <div class="col-auto d-flex align-items-center mb-xl-0 mb-5">
         <a href="#" class="btns btns--ac-blue btns--lg">
           <i class="fas fa-plus fs-12 me-4"></i>
           Add Company
         </a>
+      </div>
+      <!-- search companies  -->
+      <!-- js in js/companies-live-search.js   -->
+      <div class="col-12 col-xl-auto d-flex align-items-center">
+        <div id="search-companies">
+          <input type="text" id="search-companies-input" placeholder="Search..." >
+          <i class="fas fa-search text-slate-gray"></i>
+        </div>
       </div>
     </div>
   </section>
@@ -330,9 +336,7 @@
 
           <div class="company company--active ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
-              <p class="text-dark-blue fs-14 font-rubik mb-0">
-                1 MY REALLY LONG COMPANY NAME LTD
-              </p>
+              <a href="#" class="text-decoration-none text-dark-blue fs-14 font-rubik mb-0">1 MY REALLY LONG COMPANY NAME LTD</a>
             </div>
             <div class="company__renew">
               <p class="label text-dark-blue fs-12 font-rubik mb-0">
@@ -405,9 +409,7 @@
 
           <div class="company company--active ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
-              <p class="text-dark-blue fs-14 font-rubik mb-0">
-                2 MY REALLY LONGER COMPANY NAME LTD
-              </p>
+              <a href="#" class="text-decoration-none text-dark-blue fs-14 font-rubik mb-0">2 MY REALLY LONGER COMPANY NAME LTD</a>
             </div>
             <div class="company__renew">
               <p class="label text-dark-blue fs-12 font-rubik mb-0">
@@ -480,9 +482,7 @@
 
           <div class="company company--pending ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
-              <p class="text-dark-blue fs-14 font-rubik mb-0">
-                3 MY REALLY LONGER STILL COMPANY NAME LTD
-              </p>
+              <a href="#" class="text-decoration-none text-dark-blue fs-14 font-rubik mb-0">3 MY REALLY LONGER STILL COMPANY NAME LTD</a>
             </div>
             <div class="company__renew">
               <p class="label text-dark-blue fs-12 font-rubik mb-0">
@@ -555,9 +555,7 @@
 
           <div class="company company--suspended ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
-              <p class="text-dark-blue fs-14 font-rubik mb-0">
-                4 MY REALLY COMPANY NAME LTD
-              </p>
+              <a href="#" class="text-decoration-none text-dark-blue fs-14 font-rubik mb-0">4 MY REALLY COMPANY NAME LTD</a>
             </div>
             <div class="company__renew">
               <p class="label text-dark-blue fs-12 font-rubik mb-0">
@@ -621,9 +619,7 @@
 
           <div class="company company--suspended ps-4 pe-1 pe-sm-3 py-3 rounded-6px bg-white mb-2">
             <div class="company__name">
-              <p class="text-dark-blue fs-14 font-rubik mb-0">
-                5 MY REALLY COMPANY NAME LTD
-              </p>
+              <a href="#" class="text-decoration-none text-dark-blue fs-14 font-rubik mb-0">4 MY REALLY COMPANY NAME LTD</a>
             </div>
             <div class="company__renew">
               <p class="label text-dark-blue fs-12 font-rubik mb-0">
