@@ -1,0 +1,127 @@
+.my-modal-container{
+  z-index: 20000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(8, 7, 7, 0.5);
+
+  transition: all 1s ease-in-out;
+}
+
+.my-modal{
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+  transform:translateY(-150%);
+  transition: all 1.2s ease-in-out;
+
+  width: 90%;
+  height: fit-content;
+  max-height: 90vh;
+  overflow: auto;
+
+  &::-webkit-scrollbar { width: 0 !important }
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+#new-company-modal-container{
+  .my-modal{
+    max-width: 450px;
+    position: relative;
+
+    .close-modal{
+      span{
+        cursor: pointer;
+      }
+    }
+
+    .new-co-loc-radio-label{
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: max-content max-content;
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 15px;
+
+      cursor: pointer;
+
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-radius: 12px;
+
+      transition: all 0.2s linear;
+
+      &__circle{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20px;
+        height: 20px;
+        background-color: $pale-gray;
+        border-radius: 50%;
+        border: 1px solid $pale-gray;
+
+        transition: all 0.2s linear;
+
+        span{
+          color: $pale-gray;
+        }
+      }
+
+      &__name{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+      }
+
+      &__text{
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+      }
+
+      &:hover{
+        border: 1px solid $accent-blue;
+
+        .new-co-loc-radio-label__circle{
+          border-color: $accent-blue;
+        }
+      }
+    }
+
+    .new-co-loc-radio-btn{
+      position: absolute;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+
+      &:checked + label{
+        border: 1px solid $accent-blue !important;
+
+        .new-co-loc-radio-label__circle{
+          background-color: $accent-blue;
+          border: 1px solid $accent-blue;
+
+          span{
+            color: white;
+          }
+        }
+
+      }
+    }
+  }
+}

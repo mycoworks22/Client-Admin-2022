@@ -19,6 +19,8 @@
 
   <!-- JS FILES  -->
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
+  <script src="assets/js/my-modals.js?v=1.0" defer></script>
+  <script src="assets/js/new-company-location.js?v=1.0" defer></script>
 
 </head>
 <body>
@@ -159,7 +161,7 @@
         Services
       </li>
       <li class="side-nav-link mb-2">
-        <a href="#" class="d-flex align-items-center">
+        <a href="#" class="d-flex align-items-center" onclick="openMyModal('new-company-modal-container')">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">New Company</span>
         </a>
@@ -245,7 +247,7 @@
             </a>
           </div>
           <!-- button  -->
-          <a href="#" class="btns btns--ac-blue btns--lg">
+          <a href="#" class="btns btns--ac-blue btns--lg" onclick="openMyModal('new-company-modal-container')">
             <i class="fas fa-plus fs-12 me-4"></i>
             Add Company
           </a>
@@ -348,6 +350,73 @@
 <!-- -------------  -->
 
 </div>
+
+<!-- NEW COMPANY MODAL  -->
+<!-- styles - scss/components/my-modals.scss -->
+<!-- js - my-modals.js and new-company-location.js -->
+<div id="new-company-modal-container" class="my-modal-container d-none">
+  <div class="my-modal py-md-5 py-3 px-md-4 px-3" >
+    <!-- close  -->
+    <div class="close-modal d-flex justify-content-end" >
+      <span class="material-icons text-bright-red" onclick="closeMyModal('new-company-modal-container')">close</span>
+    </div>
+    <!-- text  -->
+    <p class="text-darker-blue font-rubik fs-18 fw-500 text-center my-3">
+      Please select the location you would like for your new company
+    </p>
+    <!-- locations  -->
+    <div class="">
+      <!-- lnd  -->
+      <input type="radio" id="new-company-location-lnd" name="new-company-location-city" class="new-co-loc-radio-btn" checked>
+      <label for="new-company-location-lnd" class="new-co-loc-radio-label mb-2">
+        <div class="new-co-loc-radio-label__circle">
+          <span class="material-icons fs-14">done</span>
+        </div>
+        <span class="new-co-loc-radio-label__name text-darker-blue font-rubik fw-400">London</span>
+        <span class="new-co-loc-radio-label__text text-gray font-rubik fs-12 fw-400">
+          Choose from our four prestigious London addresses, in the West End, The City, and the Strand.
+        </span>
+      </label>
+
+      <!-- ed  -->
+      <input type="radio" id="new-company-location-ed" name="new-company-location-city" class="new-co-loc-radio-btn">
+      <label for="new-company-location-ed" class="new-co-loc-radio-label mb-2">
+        <div class="new-co-loc-radio-label__circle">
+          <span class="material-icons fs-14">done</span>
+        </div>
+        <span class="new-co-loc-radio-label__name text-darker-blue font-rubik fw-400">Edinburgh</span>
+        <span class="new-co-loc-radio-label__text text-gray font-rubik fs-12 fw-400">
+          Our stylish and contemporary office is located in the heart of Edinburgh city centre.
+        </span>
+      </label>
+
+      <!-- ipsw  -->
+      <input type="radio" id="new-company-location-ipsw" name="new-company-location-city" class="new-co-loc-radio-btn">
+      <label for="new-company-location-ipsw" class="new-co-loc-radio-label mb-2">
+        <div class="new-co-loc-radio-label__circle">
+          <span class="material-icons fs-14">done</span>
+        </div>
+        <span class="new-co-loc-radio-label__name text-darker-blue font-rubik fw-400">Ipswich</span>
+        <span class="new-co-loc-radio-label__text text-gray font-rubik fs-12 fw-400">
+          Our modern and large office is located in central Ipswich town centre.
+        </span>
+      </label>
+
+    </div>
+    <!-- buttons  -->
+    <div class="d-flex justify-content-between align-items-center mt-5">
+      <a href="#" class="btns btns--red btns--sm" onclick="closeMyModal('new-company-modal-container')">
+        Close
+        <span class="material-icons fs-16 ms-3">close</span>
+      </a>
+      <a href="#" class="btns btns--green btns--sm" onclick="newCompanyLocation()">
+        Continue
+        <span class="material-icons fs-16 ms-3">east</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- ------------------------  -->
 
 </body>
 </html>

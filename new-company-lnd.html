@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company Name</title>
+  <title>New Company - London</title>
 
   <!-- STYLE SHEETS  -->
   <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
@@ -19,8 +19,11 @@
 
   <!-- JS FILES  -->
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
+  <script src="assets/js/side-nav.js?v=1.0" defer></script>
   <script src="assets/js/my-modals.js?v=1.0" defer></script>
   <script src="assets/js/new-company-location.js?v=1.0" defer></script>
+  <script src="assets/js/add-new-company.js.js?v=1.0" defer></script>
+
 
 </head>
 <body>
@@ -145,7 +148,7 @@
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Account</span>
         </a>
       </li>
-      <li class="side-nav-link side-nav-link--active  mb-2">
+      <li class="side-nav-link  mb-2">
         <a href="companies.html" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Companies</span>
@@ -160,7 +163,7 @@
       <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 mt-4">
         Services
       </li>
-      <li class="side-nav-link mb-2">
+      <li class="side-nav-link side-nav-link--active mb-2">
         <a href="#" class="d-flex align-items-center" onclick="openMyModal('new-company-modal-container')">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">New Company</span>
@@ -230,300 +233,268 @@
 <!-- style in scss/layout-and-sections/_content-wrap.scss  -->
 <div id="content-wrap" class="bg-pale-blue py-5">
 
-  <!-- PAGE TITLE  -->
-  <!-- style in scss/layout-and-sections/_companies-page.scss  -->
-  <section class="container-fluid mb-4 pb-2">
-    <div class="row row-max-width">
-      <!-- page title  -->
-      <div class="col-12 col-xl d-flex align-items-center mb-4 mb-xl-0">
-        <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
-          MY REALLY LONG COMPANY NAME LTD
-        </h1>
-      </div>
-      <!-- import company btn  -->
-      <div class="col-auto">
-        <a href="#" class="btns btns--ac-blue btns--lg">
-          <i class="fas fa-plus fs-12 me-4"></i>
-          Import Company
-        </a>
-      </div>
+<!-- PAGE TOP  -->
+<!-- style in scss/layout-and-sections/_new-company-page.scss  -->
+<div class="container-fluid mb-5 pb-3">
+  <div class="row row-max-width  align-items-center">
+    <!-- page title  -->
+    <div class="col-12 col-lg">
+      <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
+        Add a New Company - <span class="fw-500">London</span>
+      </h1>
     </div>
-  </section>
-  <!-- -------------  -->
-
-  <!-- TAB BTNS -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="company-tab-btns" class="container-fluid mb-4">
-    <div class="row row-max-width">
-      <div class="col-12 d-flex align-items-stretch flex-wrap">
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-1 px-3 my-1 me-2">
-          <span class="material-symbols-outlined d-block">dashboard</span>
-        </a>
-        <a href="#" class="tab-btn tab-btn--active d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Overview</a>
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">My Mail</a>
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Messages</a>
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Documents</a>
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Company Information</a>
-      </div>
+    <!-- import company btn  -->
+    <div class="col-auto mt-3 mt-lg-0">
+      <a href="#" class="btns btns--ac-blue btns--lg">
+        <i class="fas fa-plus fs-12 me-4"></i>
+        Import Company
+      </a>
     </div>
-  </section>
-  <!-- -------------  -->
+  </div>
+</div>
+<!-- -------------  -->
 
 
-  <!-- COMPANY OVERVIEW -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="company-overview-wrap" class="container-fluid">
-    <div class="row row-max-width">
+<!-- COMPANY TYPE  -->
+<!-- style in scss/layout-and-sections/_new-company-page.scss  -->
+<!-- js in js/add-new-company.js  -->
+<div class="container-fluid mb-5" id="select-company-type">
+  <!-- title  -->
+  <div class="row row-max-width  align-items-center mb-4">
+    <div class="col-auto">
+      <h1 class="fs-22 fw-400 font-rubik text-dark-blue mb-0">
+        Company Type
+      </h1>
+    </div>
+    <div class="col">
+      <h1 class="fs-13 fw-400 font-rubik text-gray mb-0">
+        Choose the type of company and the service required
+      </h1>
+    </div>
+  </div>
+  <!-- boxes  -->
+  <div class="row row-max-width align-items-stretch">
 
-      <div class="col-xl-6">
-        <div class="overview-table bg-white rounded-6px">
-          <!-- c name  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Company Name
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              MY REALLY LONG COMPANY NAME LTD
-            </p>
-          </div>
-          <!-- c number  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Company Number
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09347868
+    <!-- box 1  -->
+    <div class="col-4">
+      <div class="company-box bg-white" id="new-company-type-box-1">
+        <!-- col 1  -->
+        <div class="company-box__col-1 py-4 px-xxl-3 px-2">
+          <div class="company-box__heading d-flex justify-content-start">
+            <h1 class="fs-17 fw-400 font-rubik text-dark-blue mb-2 me-2">
+              Limited Companies Only
+            </h1>
+            <p data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip text">
+              <span class="material-icons material-icons-outlined text-accent-blue fs-18">info</span>
             </p>
           </div>
-          <!-- Registered In  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Registered In
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              England
-            </p>
-          </div>
-          <!-- Status  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Status
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Active
-            </p>
-          </div>
-          <!-- Incorporation Date  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Incorporation Date
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09 December 2014
-            </p>
-          </div>
+
+          <p class="fs-14 fw-400 font-rubik text-gray mb-0">
+            Import Company House data using your company number
+          </p>
+        </div>
+        <!-- col 2  -->
+        <div class="company-box__col-2 d-flex justify-content-center align-items-center py-4 px-xxl-3 px-2">
+          <input type="radio" id="new-company-type-1" name="new-company-type" value="new-company-type-1">
+          <label for="new-company-type-1" class="new-company-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
         </div>
       </div>
-
-      <div class="col-xl-6">
-        <div class="overview-table bg-white rounded-6px">
-          <!-- Accounts Due  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Accounts Due
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              30 September 2022
-            </p>
-          </div>
-          <!-- Accounts Made Up to  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Accounts Made Up to
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              31 December 2020
-            </p>
-          </div>
-          <!-- Confirmation Statement Due  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Confirmation Statement Due
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              23 December 2022
-            </p>
-          </div>
-          <!-- Confirmation Statement Up To  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Confirmation Statement Up To
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09 December 2022
-            </p>
-          </div>
-          <!-- Nature of Business  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Nature of Business
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              82110
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
-  <!-- -------------  -->
 
-
-  <!-- ACTIVE SERVICES & ORDER INFO  -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="" class="container-fluid mt-5">
-    <div class="row row-max-width">
-
-      <!-- ACTIVE SERVICES  -->
-      <div class="col-xl-6">
-        <h1 class="text-dark-blue font-rubik fs-4 fw-400">
-          Active Services
-        </h1>
-
-        <div id="active-services-wrap" class="bg-white rounded-6px py-3">
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/roa.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Registered Office Address
-              </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
-            </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
-            </div>
+    <!-- box 2  -->
+    <div class="col-4">
+      <div class="company-box bg-white" id="new-company-type-box-2">
+        <!-- col 1  -->
+        <div class="company-box__col-1 py-4 px-xxl-3 px-2">
+          <div class="company-box__heading d-flex justify-content-start">
+            <h1 class="fs-17 fw-400 font-rubik text-dark-blue mb-2 me-2">
+              New Limited Company
+            </h1>
+            <p data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip text">
+              <span class="material-icons material-icons-outlined text-accent-blue fs-18">info</span>
+            </p>
           </div>
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/das.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Director Address Service
-              </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
-            </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
-            </div>
-          </div>
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/tas.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Telephone Answering Service
-              </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
-            </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
-            </div>
-          </div>
-
+          <p class="fs-14 fw-400 font-rubik text-gray mb-0">
+            Tell us the name of your new company.
+          </p>
+        </div>
+        <!-- col 2  -->
+        <div class="company-box__col-2 d-flex justify-content-center align-items-center py-4 px-xxl-3 px-2">
+          <input type="radio" id="new-company-type-2" name="new-company-type" value="new-company-type-2">
+          <label for="new-company-type-2" class="new-company-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
         </div>
       </div>
-
-      <!-- ORDER INFO -->
-      <div class="col-xl-6 mt-xl-0 mt-5">
-        <h1 class="text-dark-blue font-rubik fs-4 fw-400">
-          Order Information
-        </h1>
-
-        <div id="order-info-table" class="bg-white rounded-6px">
-          <!-- location  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Location
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              London, W1
-            </p>
-          </div>
-          <!-- postal deposit  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Postal Deposit Amount
-            </p>
-            <div class="order-info__info d-flex justify-content-between py-1 px-2 px-sm-4">
-              <p class="font-rubik fs-16 text-accent-blue m-0">
-                £15
-              </p>
-              <a href="#" class="btns btns--green btns--sm">£ Top Up</a>
-            </div>
-          </div>
-          <!-- status  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Account Status
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-green py-1 px-2 px-sm-4 m-0">
-              Active
-            </p>
-          </div>
-          <!-- fees  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Fee Paid
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              £135.98
-            </p>
-          </div>
-          <!-- invoice  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Invoice
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              <i class="fas fa-file-pdf text-red me-1 me-sm-3"></i>
-              <a href="#" class="text-accent-blue font-rubik">Invoice129343.pdf</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
-  <!-- -------------  -->
+
+    <!-- box 3  -->
+    <div class="col-4">
+      <div class="company-box bg-white" id="new-company-type-box-3">
+        <!-- col 1  -->
+        <div class="company-box__col-1 py-4 px-xxl-3 px-2">
+          <div class="company-box__heading d-flex justify-content-start">
+            <h1 class="fs-17 fw-400 font-rubik text-dark-blue mb-2 me-2">
+              International or Sole Traders
+            </h1>
+            <p data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip text">
+              <span class="material-icons material-icons-outlined text-accent-blue fs-18">info</span>
+            </p>
+          </div>
+          <p class="fs-14 fw-400 font-rubik text-gray mb-0">
+            Use this option if you are not a UK Limited company
+          </p>
+        </div>
+        <!-- col 2  -->
+        <div class="company-box__col-2 d-flex justify-content-center align-items-center py-4 px-xxl-3 px-2">
+          <input type="radio" id="new-company-type-3" name="new-company-type" value="new-company-type-3">
+          <label for="new-company-type-3" class="new-company-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- -------------  -->
+
+
+<!-- NEW COMPANY FORM  -->
+<!-- style in scss/layout-and-sections/_new-company-page.scss  -->
+<!-- js in js/add-new-company.js  -->
+<div class="container-fluid mb-5" id="new-company-form-wrap">
+  <div class="row row-max-width">
+    <div class="col-12">
+      <div class="new-company-form bg-white py-4 px-5">
+        <label class="text-dark-blue font-rubik fs-14 fw-400 mb-1" for="new-company-name">Company Name</label> <br>
+        <input type="text" id="new-company-name" name="new-company-name" class="mb-3"> <br>
+        <label class="text-dark-blue font-rubik fs-14 fw-400 mb-1" for="new-company-number">Company Number</label> <br>
+        <input type="text" id="new-company-number" name="new-company-number" class="mb-3"> <br>
+        <label class="text-dark-blue font-rubik fs-14 fw-400 mb-1" for="new-company-tr-name">Trading Name</label> <br>
+        <input type="text" id="new-company-tr-name" name="new-company-tr-name">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------  -->
+
+
+<!-- COPANY LOCATION  -->
+<!-- style in scss/layout-and-sections/_new-company-page.scss  -->
+<!-- js in js/add-new-company.js  -->
+<div class="container-fluid" id="select-company-location">
+  <div class="row row-max-width  align-items-stretch mb-4">
+    <!-- title  -->
+    <div class="col-12 mb-4">
+      <h1 class="fs-22 fw-400 font-rubik text-dark-blue mb-0">
+        Location Required
+      </h1>
+    </div>
+    <!-- London (West End) Office -->
+    <div class="col-xxl-3">
+      <div class="location-box bg-white pt-3 pb-4 px-4">
+        <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
+          London <span class="fw-600">(West End)</span> Office <br>
+          85 Great Portland Street <br>
+          First Floor <br>
+          London <br>
+          W1W 7LT
+        </p>
+        <div class="location-box__map">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe  id="gmap_canvas" src="https://maps.google.com/maps?q=W1W%207LT&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://www.embedgooglemap.net">how to add a google map to your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+            </div>
+          </div>
+        </div>
+        <div class="location-box__btn d-flex justify-content-center pt-4">
+          <input type="radio" id="new-company-location-1" name="new-company-location" value="new-company-location-1">
+          <label for="new-company-location-1" class="new-company-location-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- London (West End) Office -->
+    <div class="col-xxl-3">
+      <div class="location-box bg-white pt-3 pb-4 px-4">
+        <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
+          London <span class="fw-600">(West End)</span> Office <br>
+          167-169 Great Portland Street <br>
+          Fifth Floor <br>
+          London <br>
+          W1W 5PF
+        </p>
+        <div class="location-box__map">
+          <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=W1W%205PF&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://www.embedgooglemap.net">how to add a google map to your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+        </div>
+        <div class="location-box__btn d-flex justify-content-center pt-4">
+          <input type="radio" id="new-company-location-2" name="new-company-location" value="new-company-location-2">
+          <label for="new-company-location-2" class="new-company-location-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- London (Strand) Office -->
+    <div class="col-3">
+      <div class="location-box bg-white pt-3 pb-4 px-4">
+        <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
+          London <span class="fw-600">(Strand)</span> Office <br>
+          7 Bell Yard <br>
+          London <br>
+          WC2A 2JR
+        </p>
+        <div class="location-box__map">
+          <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=WC2A%202JR&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://www.embedgooglemap.net">how to add a google map to your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+        </div>
+        <div class="location-box__btn d-flex justify-content-center pt-4">
+          <input type="radio" id="new-company-location-3" name="new-company-location" value="new-company-location-3">
+          <label for="new-company-location-3" class="new-company-location-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- London (City) Office -->
+    <div class="col-3">
+      <div class="location-box bg-white pt-3 pb-4 px-4">
+        <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
+          London <span class="fw-600">(City)</span> Office <br>
+          63-66 Hatton Garden <br>
+          Fifth Floor, Suite 23 <br>
+          London <br>
+          EC1N 8LE
+        </p>
+        <div class="location-box__map">
+          <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=EC1N%208LE&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://www.embedgooglemap.net">how to add a google map to your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+        </div>
+        <div class="location-box__btn d-flex justify-content-center pt-4">
+          <input type="radio" id="new-company-location-4" name="new-company-location" value="new-company-location-4">
+          <label for="new-company-location-4" class="new-company-location-btn">
+            <span class="new-company-btn-choose text-white fs-14 fw-400 font-rubik">Choose</span>
+            <span class="new-company-btn-chosen material-icons text-white">done</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------  -->
 
 </div>
 <!-- -------------  -->
+
 
 </div>
 
