@@ -7,6 +7,7 @@
     grid-template-columns: 1fr max-content;
 
     position: relative;
+    transition: border 0.3s linear;
 
     &__col-2{
       border-left: 2px solid $pale-blue;
@@ -74,6 +75,8 @@
 
     display: grid;
     grid-template-rows: 1fr max-content max-content;
+
+    transition: border 0.3s linear;
 
     &__address{
       grid-row: 1 / span 1;

@@ -18,11 +18,12 @@
   <script src="https://kit.fontawesome.com/be3a5a4e18.js?v=1.0" crossorigin="anonymous"></script>
 
   <!-- JS FILES  -->
-  <script src="assets/js/side-nav.js?v=1.0" defer></script>
+  <script src="assets/bootstrap/dist/js/bootstrap.bundle.js" defer></script>
+  <script src="assets/js/tooltips.js" defer></script>
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
   <script src="assets/js/my-modals.js?v=1.0" defer></script>
   <script src="assets/js/new-company-location.js?v=1.0" defer></script>
-  <script src="assets/js/add-new-company.js.js?v=1.0" defer></script>
+  <script src="assets/js/add-new-company.js?v=1.0" defer></script>
 
 
 </head>
@@ -215,7 +216,7 @@
           Please check our docs
         </p>
         <!-- documentation btn  -->
-        <a href="#" id="side-nav-help-doc" class="w-100 bg-white text-decoration-none text-center font-rubik text-dark-blue fw-700 fs-10 p-3 lh-1">DOCUMENTATION</a>
+        <a href="help-centre.html" id="side-nav-help-doc" class="w-100 bg-white text-decoration-none text-center font-rubik text-dark-blue fw-700 fs-14 p-3 lh-1">Help Center</a>
       </div>
     </div>
     <!-- payment & security  -->
@@ -277,14 +278,14 @@
 
     <!-- box 1  -->
     <div class="col-4">
-      <div class="company-box bg-white" id="new-company-type-box-1">
+      <div class="company-box new-company-type-box bg-white" id="new-company-type-box-1">
         <!-- col 1  -->
         <div class="company-box__col-1 py-4 px-xxl-3 px-2">
           <div class="company-box__heading d-flex justify-content-start">
             <h1 class="fs-17 fw-400 font-rubik text-dark-blue mb-2 me-2">
               Limited Companies Only
             </h1>
-            <p data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip text">
+            <p class="" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
               <span class="material-icons material-icons-outlined text-accent-blue fs-18">info</span>
             </p>
           </div>
@@ -306,14 +307,14 @@
 
     <!-- box 2  -->
     <div class="col-4">
-      <div class="company-box bg-white" id="new-company-type-box-2">
+      <div class="company-box new-company-type-box bg-white" id="new-company-type-box-2">
         <!-- col 1  -->
         <div class="company-box__col-1 py-4 px-xxl-3 px-2">
           <div class="company-box__heading d-flex justify-content-start">
             <h1 class="fs-17 fw-400 font-rubik text-dark-blue mb-2 me-2">
               New Limited Company
             </h1>
-            <p data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip text">
+            <p class="" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
               <span class="material-icons material-icons-outlined text-accent-blue fs-18">info</span>
             </p>
           </div>
@@ -334,14 +335,14 @@
 
     <!-- box 3  -->
     <div class="col-4">
-      <div class="company-box bg-white" id="new-company-type-box-3">
+      <div class="company-box new-company-type-box bg-white" id="new-company-type-box-3">
         <!-- col 1  -->
         <div class="company-box__col-1 py-4 px-xxl-3 px-2">
           <div class="company-box__heading d-flex justify-content-start">
             <h1 class="fs-17 fw-400 font-rubik text-dark-blue mb-2 me-2">
               International or Sole Traders
             </h1>
-            <p data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip text">
+            <p class="" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
               <span class="material-icons material-icons-outlined text-accent-blue fs-18">info</span>
             </p>
           </div>
@@ -368,7 +369,7 @@
 <!-- NEW COMPANY FORM  -->
 <!-- style in scss/layout-and-sections/_new-company-page.scss  -->
 <!-- js in js/add-new-company.js  -->
-<div class="container-fluid mb-5" id="new-company-form-wrap">
+<div class="container-fluid mb-5 d-none" id="new-company-form-wrap">
   <div class="row row-max-width">
     <div class="col-12">
       <div class="new-company-form bg-white py-4 px-5">
@@ -385,7 +386,7 @@
 <!-- -------------  -->
 
 
-<!-- COPANY LOCATION  -->
+<!-- COMPANY LOCATION  -->
 <!-- style in scss/layout-and-sections/_new-company-page.scss  -->
 <!-- js in js/add-new-company.js  -->
 <div class="container-fluid" id="select-company-location">
@@ -398,7 +399,7 @@
     </div>
     <!-- London (West End) Office -->
     <div class="col-xxl-3">
-      <div class="location-box bg-white pt-3 pb-4 px-4">
+      <div class="new-company-location-box location-box bg-white pt-3 pb-4 px-4">
         <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
           London <span class="fw-600">(West End)</span> Office <br>
           85 Great Portland Street <br>
@@ -425,7 +426,7 @@
     </div>
     <!-- London (West End) Office -->
     <div class="col-xxl-3">
-      <div class="location-box bg-white pt-3 pb-4 px-4">
+      <div class="new-company-location-box location-box bg-white pt-3 pb-4 px-4">
         <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
           London <span class="fw-600">(West End)</span> Office <br>
           167-169 Great Portland Street <br>
@@ -447,7 +448,7 @@
     </div>
     <!-- London (Strand) Office -->
     <div class="col-3">
-      <div class="location-box bg-white pt-3 pb-4 px-4">
+      <div class="new-company-location-box location-box bg-white pt-3 pb-4 px-4">
         <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
           London <span class="fw-600">(Strand)</span> Office <br>
           7 Bell Yard <br>
@@ -468,7 +469,7 @@
     </div>
     <!-- London (City) Office -->
     <div class="col-3">
-      <div class="location-box bg-white pt-3 pb-4 px-4">
+      <div class="new-company-location-box location-box bg-white pt-3 pb-4 px-4">
         <p class="location-box__address text-darker-blue font-rubik fs-15 fw-400 lh-lg">
           London <span class="fw-600">(City)</span> Office <br>
           63-66 Hatton Garden <br>

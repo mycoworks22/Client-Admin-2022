@@ -13,6 +13,7 @@ $font-weight-400: 400;
 $font-weight-300: 300;
 
 $font-size-22: 22px;
+$font-size-20: 20px;
 $font-size-18: 18px;
 $font-size-17: 17px;
 $font-size-16: 16px;
@@ -53,6 +54,7 @@ $utilities: map-merge((
     class: fs,
     values: (
       22: $font-size-22,
+      20: $font-size-20,
       18: $font-size-18,
       17: $font-size-17,
       16: $font-size-16,

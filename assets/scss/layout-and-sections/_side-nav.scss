@@ -5,6 +5,8 @@
   grid-template-rows: max-content 1fr;
   transition: width 0.2s ease-in-out;
 
+  filter: drop-shadow(2px 4px 28px rgba(0, 0, 0, 0.1));
+
   #side-nav-burger-wrap{
     padding: 33px 0 34px 0;
     border-bottom: 1px solid $darker-blue;

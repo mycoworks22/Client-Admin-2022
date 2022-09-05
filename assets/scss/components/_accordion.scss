@@ -1,0 +1,48 @@
+.my-accordion{
+
+  .accordion-item{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+
+  .accordion-header{
+    cursor:pointer;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    min-height: 70px;
+    padding: 5px 52px 5px 20px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .accordion-arrow{
+      transform: rotate(180deg);
+      position: absolute;
+      right: 20px;
+      top: 19;
+      font-size: 32px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  .collapsed{
+    .accordion-arrow{
+      transform: rotate(0deg) !important;
+    }
+  }
+
+  .accordion-collapse{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+  }
+
+}

@@ -67,3 +67,20 @@ $custom-colours: (
 .bg{
   @include custom-bg-color-classes;
 }
+
+
+// mixin that generates hover colors
+@mixin custom-hover-color-classes {
+  @each $name, $hex in $custom-colours {
+    &-#{$name} {
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        color: $hex !important;
+      }
+    }
+  }
+}
+.hover{
+  @include custom-hover-color-classes;
+}
+////////////////

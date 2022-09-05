@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company Name</title>
+  <title>Upload ID</title>
 
   <!-- STYLE SHEETS  -->
   <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
@@ -18,6 +18,8 @@
   <script src="https://kit.fontawesome.com/be3a5a4e18.js?v=1.0" crossorigin="anonymous"></script>
 
   <!-- JS FILES  -->
+  <script src="assets/bootstrap/dist/js/bootstrap.bundle.js" defer></script>
+  <script src="assets/js/tooltips.js" defer></script>
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
   <script src="assets/js/my-modals.js?v=1.0" defer></script>
   <script src="assets/js/new-company-location.js?v=1.0" defer></script>
@@ -43,7 +45,7 @@
       <!-- links  -->
       <div class="col d-xl-flex d-none align-items-center justify-content-end mt-0">
         <div class="d-flex" id="top-nav-links">
-          <a href="#" class="text-slate-blue text-decoration-none font-rubik">Upload ID</a>
+          <a href="#" class="top-nav-links-active text-slate-blue text-decoration-none font-rubik">Upload ID</a>
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Make a Payment</a>
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Our Offices</a>
           <a href="#" class="text-slate-blue text-decoration-none font-rubik">Live Chat</a>
@@ -145,7 +147,7 @@
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Account</span>
         </a>
       </li>
-      <li class="side-nav-link side-nav-link--active  mb-2">
+      <li class="side-nav-link mb-2">
         <a href="companies.html" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Companies</span>
@@ -230,303 +232,85 @@
 <!-- style in scss/layout-and-sections/_content-wrap.scss  -->
 <div id="content-wrap" class="bg-pale-blue py-5">
 
-  <!-- PAGE TITLE  -->
-  <!-- style in scss/layout-and-sections/_companies-page.scss  -->
-  <section class="container-fluid mb-4 pb-2">
-    <div class="row row-max-width">
-      <!-- page title  -->
-      <div class="col-12 col-xl d-flex align-items-center mb-4 mb-xl-0">
-        <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
-          MY REALLY LONG COMPANY NAME LTD
+<!-- PAGE TITLE  -->
+<section class="container-fluid mb-5">
+  <div class="row row-max-width">
+    <div class="col-12">
+      <h1 class="fs-22 fw-400 font-rubik text-dark-blue mb-0">
+        Upload your ID
+      </h1>
+    </div>
+  </div>
+</section>
+<!-- -------------  -->
+
+
+<!-- UPLOAD DOCUMENTS  -->
+<!-- style in scss/layout-and-sections/_upload-id-page.scss  -->
+<section id="upload-ID-wrap" class="container-fluid">
+  <div class="row row-max-width">
+    <div class="col-12">
+      <div class="bg-white rounded-6px px-5 py-4">
+
+      <!-- AML  -->
+      <div id="aml-wrap" class="d-flex flex-wrap px-lg-4 px-0 mb-4">
+        <h1 class="fs-18 fw-400 font-roboto text-dark-blue text-nowrap me-4">
+          AML Regulations
         </h1>
-        <h2 id="company-renewal-date" class="text-dark-red font-rubik fs-16 fw-400 mb-0">
-          <span class="fs-16 fw-400 font-rubik text-dark-blue mb-0 ms-2">
-            -
-          </span>
-          Renewal Due 03/03/2023
-        </h2>
+        <p class="fs-15 fw-400 font-roboto text-gray">
+          To comply with Anti-Money Laundering (AML) regulations and 'Know Your Customer' (KYC) requirements we need to obtain proof of ID and proof of address documents for all customers who use our address and phone services.
+        </p>
       </div>
-      <!-- import company btn  -->
-      <div class="col-auto">
-        <a href="#" class="btns btns--ac-blue btns--lg">
-          <i class="fas fa-plus fs-12 me-4"></i>
-          Import Company
-        </a>
+      <!-- -------------  -->
+
+      <!-- Proof of identity -->
+      <div id="id-proof-wrap" class=" px-lg-4 px-0">
+        <!-- title  -->
+        <div class="d-flex justify-content-start align-items-center mb-3">
+          <h1 class="lh-sm fs-18 fw-400 font-roboto text-dark-blue me-2 mb-0">
+            Proof of identity
+          </h1>
+          <p class="mb-0 pt-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
+            <span class="material-symbols-outlined text-dark-blue fs-18">help</span>
+          </p>
+        </div>
+        <!-- list -->
+        <!-- style in components/_lists.scss -->
+        <ul class="blue-dot-list">
+          <li>
+            Passport
+          </li>
+          <li>
+            Driving licence (photocard only, no paper UK driving licences can be accepted)
+          </li>
+          <li>
+            National identity card
+          </li>
+          <li>
+            HM Forces identity card
+          </li>
+          <li>
+            Student Card (must be current)
+          </li>
+          <li>
+            Employment identification card
+          </li>
+          <li>
+            Disabled drivers blue pass
+          </li>
+        </ul>
+        <!-- upload input  -->
+        <form action="">
+          <input class="box__file" type="file" name="" id="" />
+        </form>
+      </div>
+      <!-- -------------  -->
+
       </div>
     </div>
-  </section>
-  <!-- -------------  -->
-
-  <!-- TAB BTNS -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="company-tab-btns" class="container-fluid mb-4">
-    <div class="row row-max-width">
-      <div class="col-12 d-flex align-items-stretch flex-wrap">
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-1 px-3 my-1 me-2">
-          <span class="material-symbols-outlined d-block">dashboard</span>
-        </a>
-        <a href="single-company.html" class="tab-btn tab-btn--active d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Overview</a>
-        <a href="single-company-mail.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">My Mail</a>
-        <a href="single-company-messages.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Messages</a>
-        <a href="single-company-docs.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Documents</a>
-        <a href="single-company-c-info.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Company Information</a>
-      </div>
-    </div>
-  </section>
-  <!-- -------------  -->
-
-
-  <!-- COMPANY OVERVIEW -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="company-overview-wrap" class="container-fluid">
-    <div class="row row-max-width">
-
-      <div class="col-xl-6">
-        <div class="overview-table bg-white rounded-6px">
-          <!-- c name  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Company Name
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              MY REALLY LONG COMPANY NAME LTD
-            </p>
-          </div>
-          <!-- c number  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Company Number
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09347868
-            </p>
-          </div>
-          <!-- Registered In  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Registered In
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              England
-            </p>
-          </div>
-          <!-- Status  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Status
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Active
-            </p>
-          </div>
-          <!-- Incorporation Date  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Incorporation Date
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09 December 2014
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xl-6">
-        <div class="overview-table bg-white rounded-6px">
-          <!-- Accounts Due  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Accounts Due
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              30 September 2022
-            </p>
-          </div>
-          <!-- Accounts Made Up to  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Accounts Made Up to
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              31 December 2020
-            </p>
-          </div>
-          <!-- Confirmation Statement Due  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Confirmation Statement Due
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              23 December 2022
-            </p>
-          </div>
-          <!-- Confirmation Statement Up To  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Confirmation Statement Up To
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09 December 2022
-            </p>
-          </div>
-          <!-- Nature of Business  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Nature of Business
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              82110
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- -------------  -->
-
-
-  <!-- ACTIVE SERVICES & ORDER INFO  -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="" class="container-fluid mt-5">
-    <div class="row row-max-width">
-
-      <!-- ACTIVE SERVICES  -->
-      <div class="col-xl-6">
-        <h1 class="text-dark-blue font-rubik fs-4 fw-400">
-          Active Services
-        </h1>
-
-        <div id="active-services-wrap" class="bg-white rounded-6px py-3">
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/roa.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Registered Office Address
-              </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
-            </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
-            </div>
-          </div>
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/das.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Director Address Service
-              </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
-            </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
-            </div>
-          </div>
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/tas.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Telephone Answering Service
-              </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
-            </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ORDER INFO -->
-      <div class="col-xl-6 mt-xl-0 mt-5">
-        <h1 class="text-dark-blue font-rubik fs-4 fw-400">
-          Order Information
-        </h1>
-
-        <div id="order-info-table" class="bg-white rounded-6px">
-          <!-- location  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Location
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              London, W1
-            </p>
-          </div>
-          <!-- postal deposit  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Postal Deposit Amount
-            </p>
-            <div class="order-info__info d-flex justify-content-between py-1 px-2 px-sm-4">
-              <p class="font-rubik fs-16 text-accent-blue m-0">
-                £15
-              </p>
-              <a href="#" class="btns btns--green btns--sm">£ Top Up</a>
-            </div>
-          </div>
-          <!-- status  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Account Status
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-green py-1 px-2 px-sm-4 m-0">
-              Active
-            </p>
-          </div>
-          <!-- fees  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Fee Paid
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              £135.98
-            </p>
-          </div>
-          <!-- invoice  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Invoice
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              <i class="fas fa-file-pdf text-red me-1 me-sm-3"></i>
-              <a href="#" class="text-accent-blue font-rubik">Invoice129343.pdf</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- -------------  -->
+  </div>
+</section>
+<!-- -------------  -->
 
 </div>
 <!-- -------------  -->

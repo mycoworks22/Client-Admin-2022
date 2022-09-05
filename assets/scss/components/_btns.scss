@@ -39,6 +39,16 @@
     }
   }
 
+  &--d-blue{
+    background-color: $dark-blue;
+    color: white;
+
+    &:hover{
+      background-color: $darker-blue;
+      color: white;
+    }
+  }
+
   &--green{
     background-color: $green;
     color: white;

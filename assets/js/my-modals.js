@@ -9,7 +9,7 @@ function openMyModal(param) {
 
   // show the modal
   setTimeout( function () {
-    modalInner.style.transform = 'translateY(0%)';
+    modalInner.style.transform = 'translateY(0)';
   }, 100);
 }
 
@@ -20,11 +20,11 @@ function closeMyModal(param) {
 
 
   // hide modal
-  modalInner.style.transform = 'translateY(-150%)';
+  modalInner.style.transform = 'translateY(-100vh)';
 
   setTimeout( function () {
     // hide modal container
     modalContainer.classList.remove('d-flex');
     modalContainer.classList.add('d-none');
-  }, 1000);
+  }, 500);
 }

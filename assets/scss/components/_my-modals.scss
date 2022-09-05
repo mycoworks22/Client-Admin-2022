@@ -15,15 +15,15 @@
 
   background-color: rgba(8, 7, 7, 0.5);
 
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .my-modal{
   background-color: white;
   border-radius: 6px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
-  transform:translateY(-150%);
-  transition: all 1.2s ease-in-out;
+  transform:translateY(-100vh);
+  transition: all 1s ease;
 
   width: 90%;
   height: fit-content;
@@ -121,6 +121,19 @@
           }
         }
 
+      }
+    }
+  }
+}
+
+#request-original-modal-container{
+  .my-modal{
+    max-width: 500px;
+    position: relative;
+
+    .close-modal{
+      span{
+        cursor: pointer;
       }
     }
   }

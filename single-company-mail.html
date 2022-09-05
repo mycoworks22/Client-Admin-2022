@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Name - Mail</title>
+
+  <!-- STYLE SHEETS  -->
+  <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-utilities.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- FONT AWESOME AND GOOGLE MATERIAL ICONS  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/be3a5a4e18.js?v=1.0" crossorigin="anonymous"></script>
+
+  <!-- JS FILES  -->
+  <script src="assets/js/side-nav.js?v=1.0" defer></script>
+  <script src="assets/js/my-modals.js?v=1.0" defer></script>
+  <script src="assets/js/new-company-location.js?v=1.0" defer></script>
+  <script src="assets/js/mail-filter.js?v=1.0" defer></script>
+
+</head>
+<body>
+
+<div id="body-wrap">
+
+<!-- TOP NAV  -->
+<!-- style in scss/layout-and-sections/_top-nav.scss  -->
+<nav id="top-nav-wrap" class="py-3">
+  <div class="container-fluid">
+    <div class="row row-max-width">
+      <!-- mobile nav btn  -->
+      <div class="col-auto d-flex d-sm-none align-items-center">
+        <span class="material-icons text-accent-blue fs-1" id="top-nav-burger">menu</span>
+      </div>
+      <!-- logo  -->
+      <div class="col col-xl-auto d-flex align-items-center justify-content-center justify-content-sm-start" id="top-nav-logo">
+        <img src="assets/img/logo-dark.svg" alt="">
+      </div>
+      <!-- links  -->
+      <div class="col d-xl-flex d-none align-items-center justify-content-end mt-0">
+        <div class="d-flex" id="top-nav-links">
+          <a href="#" class="text-slate-blue text-decoration-none font-rubik">Upload ID</a>
+          <a href="#" class="text-slate-blue text-decoration-none font-rubik">Make a Payment</a>
+          <a href="#" class="text-slate-blue text-decoration-none font-rubik">Our Offices</a>
+          <a href="#" class="text-slate-blue text-decoration-none font-rubik">Live Chat</a>
+        </div>
+      </div>
+      <!-- notifications and profile  -->
+      <div class="col-auto col-sm-6 col-xl-auto d-flex align-items-center justify-content-end px-3">
+        <div id="top-nav-notifications" class="me-3">
+          <a href="#" class="notification-bell">
+            <i class="fas fa-bell"></i>
+            <span class="notification-bell__indicator"></span>
+          </a>
+        </div>
+        <!-- image  -->
+        <div id="top-nav-profile-image" class="me-3 d-sm-block d-none">
+          <img src="assets/img/img2.jpg" alt="">
+        </div>
+        <!-- account drop down  -->
+        <div id="top-nav-drop-down">
+          <a href="#" id="top-nav-drop-down-btn" class="text-dark-blue text-decoration-none font-rubik">
+            Joe Bloggs <i class="fas fa-caret-down"></i>
+          </a>
+          <div id="top-nav-drop-down-content">
+            <div class="bg-white py-4">
+              <a href="#" class="px-4 py-2 text-decoration-none font-rubik text-slate-blue">My Account</a>
+              <a href="#" class="px-4 py-2 text-decoration-none font-rubik text-slate-blue">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+<!-- -------------  -->
+
+<!-- SIDE NAV  -->
+<!-- style in scss/layout-and-sections/_side-nav.scss  -->
+<nav id="side-nav" class="side-nav side-nav--opened bg-dark-blue">
+
+  <!-- open/close button  -->
+  <div id="side-nav-burger-wrap">
+    <!-- button to open close / nav on larger screen  -->
+    <div id="side-nav-burger" class="mx-auto d-none d-sm-flex flex-column justify-content-between">
+      <div class="burger-line burger-line--1"></div>
+      <div class="burger-line burger-line--2"></div>
+      <div class="burger-line burger-line--3"></div>
+    </div>
+    <!-- button to slide in nav on small screen  -->
+    <div id="side-nav-burger-mobile" class="d-flex d-sm-none justify-content-center">
+      <span class="material-icons text-white fs-1" >menu</span>
+    </div>
+  </div>
+
+
+  <!-- contaner with side nav content that is scrollable - this way button will always be visible  -->
+  <div id="side-nav-scrollable-wrap" class="mt-3 mb-3">
+    <!-- side nav links  -->
+    <ul id="side-nav-links-list" class="p-0 mb-0">
+      <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 d-block d-xl-none mt-4">
+        Quick Links
+      </li>
+      <li class="side-nav-link mb-2 d-block d-xl-none">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">fingerprint</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Upload ID</span>
+        </a>
+      </li>
+      <li class="side-nav-link mb-2 d-block d-xl-none">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">credit_card</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Make a Payment</span>
+        </a>
+      </li>
+      <li class="side-nav-link mb-2 d-block d-xl-none">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">location_city</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Our Offices</span>
+        </a>
+      </li>
+      <li class="side-nav-link mb-2 d-block d-xl-none">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">forum</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Live Chat</span>
+        </a>
+      </li>
+      <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 mt-4">
+        Menu
+      </li>
+      <li class="side-nav-link mb-2">
+        <a href="index.html" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">dashboard</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Dashboard</span>
+        </a>
+      </li>
+      <li class="side-nav-link mb-2">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">account_box</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Account</span>
+        </a>
+      </li>
+      <li class="side-nav-link side-nav-link--active  mb-2">
+        <a href="companies.html" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Companies</span>
+        </a>
+      </li>
+      <li class="side-nav-link ">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">mail</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Contact Us</span>
+        </a>
+      </li>
+      <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 mt-4">
+        Services
+      </li>
+      <li class="side-nav-link mb-2">
+        <a href="#" class="d-flex align-items-center" onclick="openMyModal('new-company-modal-container')">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">New Company</span>
+        </a>
+      </li>
+      <li class="side-nav-link mb-2">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">autorenew</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Service Renewal</span>
+        </a>
+      </li>
+      <li class="side-nav-link mb-2">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">sell</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Pricing & Services</span>
+        </a>
+      </li>
+      <li class="side-nav-link">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">diversity_3</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Meeting Space</span>
+        </a>
+      </li>
+      <li class="side-nav-heading font-rubik fw-500 text-gray-blue mb-2 mt-4">
+        Other
+      </li>
+      <li class="side-nav-link">
+        <a href="#" class="d-flex align-items-center">
+          <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">settings</span>
+          <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">Preferences</span>
+        </a>
+      </li>
+    </ul>
+    <!-- side nav help  -->
+    <div id="side-nav-help" class="bg-accent-blue my-4 p-3">
+      <div id="side-nav-help-inner-wrap">
+        <!-- qustion  -->
+        <a href="#" id="side-nav-help-question" class="d-flex justify-content-center align-items-center bg-white">
+          <span class="material-symbols-outlined p-1 fs-6">question_mark</span>
+        </a>
+        <!-- live chat  -->
+        <a href="#" id="side-nav-help-chat" class="font-roboto fw-500 text-white text-decoration-none">
+          Live Chat
+          <i class="fas fa-comments fs-4 ps-2"></i>
+        </a>
+        <!-- text  -->
+        <p id="side-nav-help-text" class="text-white font-rubik fw-400 fs-12 mb-3">
+          <span class="text-white font-rubik fw-700 fs-14">Need help?</span> <br>
+          Please check our docs
+        </p>
+        <!-- documentation btn  -->
+        <a href="help-centre.html" id="side-nav-help-doc" class="w-100 bg-white text-decoration-none text-center font-rubik text-dark-blue fw-700 fs-14 p-3 lh-1">Help Center</a>
+      </div>
+    </div>
+    <!-- payment & security  -->
+    <div id="side-nav-payment" class="mx-auto">
+      <p class="mb-2 text-white text-center font-inter fs-14">Payment & Security</p>
+      <img src="assets/img/payment.svg" class="d-block w-100" alt="">
+    </div>
+
+  </div>
+
+</nav>
+<!-- -------------  -->
+
+<!-- CONTENT WRAP  -->
+<!-- style in scss/layout-and-sections/_content-wrap.scss  -->
+<div id="content-wrap" class="bg-pale-blue py-5">
+
+  <!-- PAGE TITLE  -->
+  <!-- style in scss/layout-and-sections/_companies-page.scss  -->
+  <section class="container-fluid mb-4 pb-2">
+    <div class="row row-max-width">
+      <!-- page title  -->
+      <div class="col-12 col-xl d-flex flex-wrap align-items-center mb-4 mb-xl-0">
+        <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0 me-2">
+          MY REALLY LONG COMPANY NAME LTD
+        </h1>
+        <h2 id="company-renewal-date" class="text-dark-red font-rubik fs-16 fw-400 mb-0">
+          <span class="fs-16 fw-400 font-rubik text-dark-blue mb-0">
+            -
+          </span>
+          Renewal Due 03/03/2023
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- -------------  -->
+
+  <!-- TAB BTNS -->
+  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
+  <section id="company-tab-btns" class="container-fluid mb-4">
+    <div class="row row-max-width">
+      <div class="col-12 d-flex align-items-stretch flex-wrap">
+        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-1 px-3 my-1 me-2">
+          <span class="material-symbols-outlined d-block">dashboard</span>
+        </a>
+        <a href="single-company.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Overview</a>
+        <a href="single-company-mail.html" class="tab-btn tab-btn--active d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">My Mail</a>
+        <a href="single-company-messages.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Messages</a>
+        <a href="single-company-docs.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Documents</a>
+        <a href="single-company-c-info.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Company Information</a>
+      </div>
+    </div>
+  </section>
+  <!-- -------------  -->
+
+
+  <!-- FILTER MAIL  -->
+  <!-- style in scss/layout-and-sections/_single-company-mail.scss  -->
+  <!-- java script in mail-filter.js  -->
+  <section id="company-mail-filter" class="container-fluid mb-4">
+    <div class="row row-max-width align-items-center">
+      <div class="col-xl-auto col-12 mb-xl-0 mb-3">
+        <p class="text-dark-blue font-rubik fs-18 mb-0">
+          View, download or request originals of your mail.
+        </p>
+      </div>
+      <div class="col d-flex align-items-center">
+        <p class="text-dark-blue font-rubik fs-16 mb-0 me-2">
+          Filter Mail Type:
+        </p>
+        <div id="mail-type">
+          <select name="mail-type" id="mail-type-select">
+            <option value="all-mail">All Mail</option>
+            <option value="business-mail">Business Mail</option>
+            <option value="official-mail">Official Mail</option>
+          </select>
+          <span class="material-icons text-dark-blue">
+            arrow_drop_down
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- -------------  -->
+
+
+  <!-- COMPANY MAIL  -->
+  <!-- style in scss/layout-and-sections/_single-company-mail.scss  -->
+  <section id="company-mail" class="container-fluid mb-4">
+    <div class="row row-max-width">
+      <div class="col">
+        <div class="company-mail-wrap">
+
+          <!-- mail box  -->
+          <div class="mail mail--business bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Business Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--official bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Official Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--business bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Business Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--official bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Official Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--business bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Business Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--official bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Official Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--business bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Business Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- mail box  -->
+          <div class="mail mail--official bg-white rounded-6px" >
+            <!-- head  -->
+            <div class="mail__head d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+              <!-- date  -->
+              <div class="mail__date d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">date_range</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  24 February 2023
+                </p>
+              </div>
+              <!-- cateory -->
+              <div class="mail__category d-flex align-items-center">
+                <span class="material-icons text-accent-blue me-2">mail</span>
+                <p class="mb-0 text-dark-blue font-rubik fw-400 fs-14">
+                  Official Mail
+                </p>
+              </div>
+            </div>
+            <!-- body  -->
+            <p class="mail__body text-dark-blue font-rubik fs-15 fw-400 py-3 px-4 mb-0">
+              Received a letter from <span class="fw-500">“Companies House”</span> which we have scanned and uploaded to your account. To view, request the original or arrange to collect your mail use the options below
+            </p>
+            <!-- footer  -->
+            <div class="mail__footer d-flex flex-wrap justify-content-between align-items-center">
+              <!-- download  -->
+              <div class="mail__download d-flex align-items-center py-3 px-4">
+                <a href="#" class="text-decoration-none text-dark-blue font-rubik fw-400 fs-14 d-flex align-items-center hover-accent-blue">
+                  <span class="material-icons text-accent-blue fs-22 me-2">insert_drive_file</span>
+                  Download Mail & Print
+                </a>
+              </div>
+              <!-- original -->
+              <div class="mail__original d-flex align-items-center py-3 px-4">
+                <a href="#" class="btns btns--ac-blue btns--sm fs-13" onclick="openMyModal('request-original-modal-container')">Request Original</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- -------------  -->
+
+
+</div>
+<!-- -------------  -->
+
+</div>
+
+<!-- NEW COMPANY MODAL  -->
+<!-- styles - scss/components/my-modals.scss -->
+<!-- js - my-modals.js and new-company-location.js -->
+<div id="new-company-modal-container" class="my-modal-container d-none">
+  <div class="my-modal py-md-5 py-3 px-md-4 px-3" >
+    <!-- close  -->
+    <div class="close-modal d-flex justify-content-end" >
+      <span class="material-icons text-bright-red" onclick="closeMyModal('new-company-modal-container')">close</span>
+    </div>
+    <!-- text  -->
+    <p class="text-darker-blue font-rubik fs-18 fw-500 text-center my-3">
+      Please select the location you would like for your new company
+    </p>
+    <!-- locations  -->
+    <div class="">
+      <!-- lnd  -->
+      <input type="radio" id="new-company-location-lnd" name="new-company-location-city" class="new-co-loc-radio-btn" checked>
+      <label for="new-company-location-lnd" class="new-co-loc-radio-label mb-2">
+        <div class="new-co-loc-radio-label__circle">
+          <span class="material-icons fs-14">done</span>
+        </div>
+        <span class="new-co-loc-radio-label__name text-darker-blue font-rubik fw-400">London</span>
+        <span class="new-co-loc-radio-label__text text-gray font-rubik fs-12 fw-400">
+          Choose from our four prestigious London addresses, in the West End, The City, and the Strand.
+        </span>
+      </label>
+
+      <!-- ed  -->
+      <input type="radio" id="new-company-location-ed" name="new-company-location-city" class="new-co-loc-radio-btn">
+      <label for="new-company-location-ed" class="new-co-loc-radio-label mb-2">
+        <div class="new-co-loc-radio-label__circle">
+          <span class="material-icons fs-14">done</span>
+        </div>
+        <span class="new-co-loc-radio-label__name text-darker-blue font-rubik fw-400">Edinburgh</span>
+        <span class="new-co-loc-radio-label__text text-gray font-rubik fs-12 fw-400">
+          Our stylish and contemporary office is located in the heart of Edinburgh city centre.
+        </span>
+      </label>
+
+      <!-- ipsw  -->
+      <input type="radio" id="new-company-location-ipsw" name="new-company-location-city" class="new-co-loc-radio-btn">
+      <label for="new-company-location-ipsw" class="new-co-loc-radio-label mb-2">
+        <div class="new-co-loc-radio-label__circle">
+          <span class="material-icons fs-14">done</span>
+        </div>
+        <span class="new-co-loc-radio-label__name text-darker-blue font-rubik fw-400">Ipswich</span>
+        <span class="new-co-loc-radio-label__text text-gray font-rubik fs-12 fw-400">
+          Our modern and large office is located in central Ipswich town centre.
+        </span>
+      </label>
+
+    </div>
+    <!-- buttons  -->
+    <div class="d-flex justify-content-between align-items-center mt-5">
+      <a href="#" class="btns btns--red btns--sm" onclick="closeMyModal('new-company-modal-container')">
+        Close
+        <span class="material-icons fs-16 ms-3">close</span>
+      </a>
+      <a href="#" class="btns btns--green btns--sm" onclick="newCompanyLocation()">
+        Continue
+        <span class="material-icons fs-16 ms-3">east</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- ------------------------  -->
+
+<!-- REQUEST ORIGINAL MODAL -->
+<!-- styles - scss/components/my-modals.scss -->
+<!-- js - my-modals.js -->
+<div id="request-original-modal-container" class="my-modal-container d-none">
+  <div class="my-modal py-5 px-4" >
+    <!-- close  -->
+    <div class="close-modal d-flex justify-content-end mb-4" >
+      <span class="material-icons text-bright-red" onclick="closeMyModal('request-original-modal-container')">close</span>
+    </div>
+    <!-- text  -->
+    <h1 class="text-darker-blue font-rubik fs-22 fw-400 text-center mb-5">
+      Are you sure you need the original copy?
+    </h1>
+    <p class="text-slate-gray font-rubik fw-400 text-center">
+      Please note that you can easily and instantly print your letter from home. You can help the environment by reducing our paper usage of envelopes.
+    </p>
+    <!-- buttons  -->
+    <div class="d-flex justify-content-between align-items-center mt-5">
+      <a href="#" class="btns btns--red btns--sm" onclick="closeMyModal('request-original-modal-container')">
+        Close
+        <span class="material-icons fs-16 ms-3">close</span>
+      </a>
+      <a href="#" class="btns btns--green btns--sm">
+        <span class="material-icons fs-16 me-3">done</span>
+        Request Original
+      </a>
+    </div>
+  </div>
+</div>
+<!-- ------------------------  -->
+
+
+</body>
+</html>

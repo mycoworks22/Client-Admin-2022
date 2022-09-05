@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company Name</title>
+  <title>Help Centre</title>
 
   <!-- STYLE SHEETS  -->
   <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
@@ -18,6 +18,7 @@
   <script src="https://kit.fontawesome.com/be3a5a4e18.js?v=1.0" crossorigin="anonymous"></script>
 
   <!-- JS FILES  -->
+  <script src="assets/bootstrap/dist/js/bootstrap.bundle.js" defer></script>
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
   <script src="assets/js/my-modals.js?v=1.0" defer></script>
   <script src="assets/js/new-company-location.js?v=1.0" defer></script>
@@ -145,7 +146,7 @@
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Account</span>
         </a>
       </li>
-      <li class="side-nav-link side-nav-link--active  mb-2">
+      <li class="side-nav-link mb-2">
         <a href="companies.html" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Companies</span>
@@ -228,305 +229,172 @@
 
 <!-- CONTENT WRAP  -->
 <!-- style in scss/layout-and-sections/_content-wrap.scss  -->
-<div id="content-wrap" class="bg-pale-blue py-5">
+<div id="content-wrap" class="bg-pale-blue pb-5">
 
-  <!-- PAGE TITLE  -->
-  <!-- style in scss/layout-and-sections/_companies-page.scss  -->
-  <section class="container-fluid mb-4 pb-2">
-    <div class="row row-max-width">
-      <!-- page title  -->
-      <div class="col-12 col-xl d-flex align-items-center mb-4 mb-xl-0">
-        <h1 class="fs-4 fw-400 font-rubik text-dark-blue mb-0">
-          MY REALLY LONG COMPANY NAME LTD
+  <!-- HELP CENTRE TOP  -->
+  <!-- styles - scss/layout-and-sections/help-centre-page.scss -->
+  <div id="help-centre-top-section">
+    <!-- bg img  -->
+    <div class="help-centre-bg-container"></div>
+
+    <!-- titles  -->
+    <div class="help-centre-titles">
+      <div class="container-fluid">
+        <div class="row row-max-width">
+          <div class="col-12 py-5">
+            <h6 class="text-white font-rubik fw-500 fs-18 text-center mb-3">
+              HELP CENTER
+            </h6>
+            <h1 class="text-white font-rubik fw-600 text-center mb-3">
+              How can we help you today?
+            </h1>
+            <p class="text-gray-blue font-rubik fw-800 fs-18 text-center mb-0">
+              Check out our FAQs and guides, contact us for detailed support
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- link boxes  -->
+    <div class="help-centre-links">
+      <div class="container-fluid">
+        <div class="row row-max-width justify-content-center align-items-stretch">
+
+          <!-- FAQs  -->
+          <div class="col-xl-3 col-4">
+            <div class="faq-link-box bg-white rounded-12px py-4 px-2 h-100">
+              <h3 class="text-dark-blue font-rubik fw-500 text-center mb-4">
+                FAQs
+              </h3>
+              <p class="text-gray-blue font-rubik fw-400 text-center mb-4">
+                Frequently asked questions and answers
+              </p>
+              <a href="faqs.html" class="btns btns--sm btns--d-blue">
+                Go to FAQs
+              </a>
+            </div>
+          </div>
+
+          <!-- Guides  -->
+          <div class="col-xl-3 col-4">
+            <div class="faq-link-box bg-white rounded-12px py-4 px-2 h-100">
+              <h3 class="text-dark-blue font-rubik fw-500 text-center mb-4">
+                Guides
+              </h3>
+              <p class="text-gray-blue font-rubik fw-400 text-center mb-4">
+                How to articles and resources to help guide you
+              </p>
+              <a href="guides.html" class="btns btns--sm btns--d-blue">
+                Go to FAQs
+              </a>
+            </div>
+          </div>
+
+          <!-- Support  -->
+          <div class="col-xl-3 col-4">
+            <div class="faq-link-box bg-white rounded-12px py-4 px-2 h-100">
+              <h3 class="text-dark-blue font-rubik fw-500 text-center mb-4">
+                Support
+              </h3>
+              <p class="text-gray-blue font-rubik fw-400 text-center mb-4">
+                Contact us for more detailed support
+              </p>
+              <a href="support.html" class="btns btns--sm btns--d-blue">
+                Go to FAQs
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------  -->
+
+
+  <!-- MOST FAQs  -->
+  <div id="most-faqs-wrap" class="container-fluid mt-5">
+    <div class="row row-max-width justify-content-center">
+      <!-- titles  -->
+      <div class="col-12">
+        <h1 class="text-dark-blue font-rubik fw-500 text-center mt-5 mb-3">
+          Most frequently asked questions
         </h1>
-        <h2 id="company-renewal-date" class="text-dark-red font-rubik fs-16 fw-400 mb-0">
-          <span class="fs-16 fw-400 font-rubik text-dark-blue mb-0 ms-2">
-            -
-          </span>
-          Renewal Due 03/03/2023
-        </h2>
-      </div>
-      <!-- import company btn  -->
-      <div class="col-auto">
-        <a href="#" class="btns btns--ac-blue btns--lg">
-          <i class="fas fa-plus fs-12 me-4"></i>
-          Import Company
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- -------------  -->
-
-  <!-- TAB BTNS -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="company-tab-btns" class="container-fluid mb-4">
-    <div class="row row-max-width">
-      <div class="col-12 d-flex align-items-stretch flex-wrap">
-        <a href="#" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-1 px-3 my-1 me-2">
-          <span class="material-symbols-outlined d-block">dashboard</span>
-        </a>
-        <a href="single-company.html" class="tab-btn tab-btn--active d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Overview</a>
-        <a href="single-company-mail.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">My Mail</a>
-        <a href="single-company-messages.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Messages</a>
-        <a href="single-company-docs.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Documents</a>
-        <a href="single-company-c-info.html" class="tab-btn d-inline-block border rounded-4px text-decoration-none text-dark-blue font-rubik fs-13 fw-500 bg-white py-2 px-3 my-1 me-2">Company Information</a>
-      </div>
-    </div>
-  </section>
-  <!-- -------------  -->
-
-
-  <!-- COMPANY OVERVIEW -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="company-overview-wrap" class="container-fluid">
-    <div class="row row-max-width">
-
-      <div class="col-xl-6">
-        <div class="overview-table bg-white rounded-6px">
-          <!-- c name  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Company Name
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              MY REALLY LONG COMPANY NAME LTD
-            </p>
-          </div>
-          <!-- c number  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Company Number
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09347868
-            </p>
-          </div>
-          <!-- Registered In  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Registered In
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              England
-            </p>
-          </div>
-          <!-- Status  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Status
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Active
-            </p>
-          </div>
-          <!-- Incorporation Date  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Incorporation Date
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09 December 2014
-            </p>
-          </div>
-        </div>
+        <p class="text-gray-blue font-rubik fw-400 fs-20 text-center mb-5">
+          Here are the most frequently asked questions you may check before getting started
+        </p>
       </div>
 
-      <div class="col-xl-6">
-        <div class="overview-table bg-white rounded-6px">
-          <!-- Accounts Due  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Accounts Due
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              30 September 2022
-            </p>
-          </div>
-          <!-- Accounts Made Up to  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Accounts Made Up to
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              31 December 2020
-            </p>
-          </div>
-          <!-- Confirmation Statement Due  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Confirmation Statement Due
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              23 December 2022
-            </p>
-          </div>
-          <!-- Confirmation Statement Up To  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Confirmation Statement Up To
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              09 December 2022
-            </p>
-          </div>
-          <!-- Nature of Business  -->
-          <div class="overview-table-row">
-            <p class="table-heading font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Nature of Business
-            </p>
-            <p class="table-content table-heading font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              82110
-            </p>
-          </div>
-        </div>
-      </div>
+      <!-- accordion  -->
+      <!-- style in scss/components/_accordion.scss  -->
+      <div class="col-xl-9 col-12">
 
-    </div>
-  </section>
-  <!-- -------------  -->
+        <div class="accordion my-accordion" id="most-faqs-accordion">
 
-
-  <!-- ACTIVE SERVICES & ORDER INFO  -->
-  <!-- style in scss/layout-and-sections/_single-company-page.scss  -->
-  <section id="" class="container-fluid mt-5">
-    <div class="row row-max-width">
-
-      <!-- ACTIVE SERVICES  -->
-      <div class="col-xl-6">
-        <h1 class="text-dark-blue font-rubik fs-4 fw-400">
-          Active Services
-        </h1>
-
-        <div id="active-services-wrap" class="bg-white rounded-6px py-3">
-
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/roa.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Registered Office Address
+          <div class="accordion-item">
+            <div class="accordion-header collapsed" id="most-asked-q-1"  data-bs-toggle="collapse" data-bs-target="#most-asked-a-1" aria-expanded="true" aria-controls="most-asked-a-1">
+              <span class="material-symbols-outlined text-accent-blue me-3">help</span>
+              <p class="text-gray-blue font-rubik fw-400 m-0">
+                Here are the most frequently asked questions you may check before getting started
               </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
+              <span class="material-symbols-outlined text-dark-blue accordion-arrow">expand_more</span>
             </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
+
+            <div id="most-asked-a-1" class="accordion-collapse collapse" aria-labelledby="most-asked-q-1" data-bs-parent="#most-faqs-accordion">
+              <div class="accordion-body">
+                <p class="mb-0 text-dark-blue font-rubik fw-400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae reiciendis, porro nemo deleniti eius vitae beatae voluptatum quod dicta cupiditate, rem excepturi tempora eos explicabo tempore odio aliquid dolores.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/das.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Director Address Service
+          <div class="accordion-item">
+            <div class="accordion-header collapsed" id="most-asked-q-2"  data-bs-toggle="collapse" data-bs-target="#most-asked-a-2" aria-expanded="true" aria-controls="most-asked-a-2">
+              <span class="material-symbols-outlined text-accent-blue me-3">help</span>
+              <p class="text-gray-blue font-rubik fw-400 m-0">
+                Here are the most frequently asked questions you may check before getting started
               </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
+              <span class="material-symbols-outlined text-dark-blue accordion-arrow">expand_more</span>
             </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
+
+            <div id="most-asked-a-2" class="accordion-collapse collapse" aria-labelledby="most-asked-q-2" data-bs-parent="#most-faqs-accordion">
+              <div class="accordion-body">
+                <p class="mb-0 text-dark-blue font-rubik fw-400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae reiciendis, porro nemo deleniti eius vitae beatae voluptatum quod dicta cupiditate, rem excepturi tempora eos explicabo tempore odio aliquid dolores.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="active-service px-3 py-3">
-            <img src="assets/img/service-images/tas.jpg" alt="" class="active-service__img">
-            <div class="active-service__name">
-              <p class="text-dark-blue font-rubik fs-18 fw-500 mb-2">
-                Telephone Answering Service
+          <div class="accordion-item">
+            <div class="accordion-header collapsed" id="most-asked-q-3"  data-bs-toggle="collapse" data-bs-target="#most-asked-a-3" aria-expanded="true" aria-controls="most-asked-a-3">
+              <span class="material-symbols-outlined text-accent-blue me-3">help</span>
+              <p class="text-gray-blue font-rubik fw-400 m-0">
+                Here are the most frequently asked questions you may check before getting started
               </p>
-              <p class="text-gray font-runik mb-0">
-                1 Year Service
-              </p>
+              <span class="material-symbols-outlined text-dark-blue accordion-arrow">expand_more</span>
             </div>
-            <div class="active-service__renew-date">
-              <p class="text-dark-blue font-rubik mb-2">
-                <i class="far fa-calendar-alt me-2"></i>
-                Renewal date
-              </p>
-              <p class="text-accent-blue font-rubik text-sm-end mb-0">
-                19/11/2022
-              </p>
+
+            <div id="most-asked-a-3" class="accordion-collapse collapse" aria-labelledby="most-asked-q-3" data-bs-parent="#most-faqs-accordion">
+              <div class="accordion-body">
+                <p class="mb-0 text-dark-blue font-rubik fw-400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae reiciendis, porro nemo deleniti eius vitae beatae voluptatum quod dicta cupiditate, rem excepturi tempora eos explicabo tempore odio aliquid dolores.
+                </p>
+              </div>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- ORDER INFO -->
-      <div class="col-xl-6 mt-xl-0 mt-5">
-        <h1 class="text-dark-blue font-rubik fs-4 fw-400">
-          Order Information
-        </h1>
-
-        <div id="order-info-table" class="bg-white rounded-6px">
-          <!-- location  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Location
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              London, W1
-            </p>
-          </div>
-          <!-- postal deposit  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Postal Deposit Amount
-            </p>
-            <div class="order-info__info d-flex justify-content-between py-1 px-2 px-sm-4">
-              <p class="font-rubik fs-16 text-accent-blue m-0">
-                £15
-              </p>
-              <a href="#" class="btns btns--green btns--sm">£ Top Up</a>
-            </div>
-          </div>
-          <!-- status  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Account Status
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-green py-1 px-2 px-sm-4 m-0">
-              Active
-            </p>
-          </div>
-          <!-- fees  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Fee Paid
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              £135.98
-            </p>
-          </div>
-          <!-- invoice  -->
-          <div class="order-info">
-            <p class="order-info__name font-rubik fs-16 fw-500 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              Invoice
-            </p>
-            <p class="order-info__info font-rubik fs-16 text-dark-blue py-1 px-2 px-sm-4 m-0">
-              <i class="fas fa-file-pdf text-red me-1 me-sm-3"></i>
-              <a href="#" class="text-accent-blue font-rubik">Invoice129343.pdf</a>
-            </p>
-          </div>
-        </div>
       </div>
 
     </div>
-  </section>
+  </div>
   <!-- -------------  -->
+
+
 
 </div>
 <!-- -------------  -->

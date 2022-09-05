@@ -1,0 +1,58 @@
+#company-messages{
+
+  .company-messages-wrap{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+    column-gap: 15px;
+    row-gap: 20px;
+    align-items: stretch;
+  }
+
+  .message{
+    display: grid;
+    grid-template-rows: max-content 1fr max-content max-content;
+    border: 1px solid white;
+
+    &--deleted{
+      border: 1px solid $red;
+    }
+
+    &__head{
+      border-bottom: 2px solid $pale-blue;
+    }
+
+    &__body{
+      height: 100px;
+
+      overflow-y: auto;
+      // style scrollbar for FireFox
+      scrollbar-color:white;
+      scrollbar-width: thin;
+
+      // style scrollbar for Safari, Chrome and Opera
+      &::-webkit-scrollbar { width: 0 !important }
+    }
+
+    &__footer{
+      display: grid;
+      grid-template-columns: 1fr max-content;
+      grid-template-rows: max-content max-content;
+    }
+
+    &__email{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &__tel{
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    &__delete{
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+  }
+}
