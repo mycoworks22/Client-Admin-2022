@@ -23,6 +23,7 @@
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
   <script src="assets/js/my-modals.js?v=1.0" defer></script>
   <script src="assets/js/new-company-location.js?v=1.0" defer></script>
+  <script src="assets/js/drag-and-drop-file.js?v=1.0" defer></script>
 
 </head>
 <body>
@@ -250,7 +251,7 @@
 <section id="upload-ID-wrap" class="container-fluid">
   <div class="row row-max-width">
     <div class="col-12">
-      <div class="bg-white rounded-6px px-5 py-4">
+      <div class="bg-white rounded-6px px-5 pt-4 pb-5">
 
       <!-- AML  -->
       <div id="aml-wrap" class="d-flex flex-wrap px-lg-4 px-0 mb-4">
@@ -264,44 +265,134 @@
       <!-- -------------  -->
 
       <!-- Proof of identity -->
-      <div id="id-proof-wrap" class=" px-lg-4 px-0">
-        <!-- title  -->
-        <div class="d-flex justify-content-start align-items-center mb-3">
-          <h1 class="lh-sm fs-18 fw-400 font-roboto text-dark-blue me-2 mb-0">
-            Proof of identity
-          </h1>
-          <p class="mb-0 pt-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
-            <span class="material-symbols-outlined text-dark-blue fs-18">help</span>
-          </p>
+      <div id="id-proof-wrap" class="px-lg-4 px-0 pb-5 d-flex justify-content-between border-bottom">
+        <div class="me-3">
+          <!-- title  -->
+          <div class="d-flex justify-content-start align-items-center mb-3">
+            <h1 class="lh-sm fs-18 fw-400 font-roboto text-dark-blue me-2 mb-0">
+              Proof of identity
+            </h1>
+            <p class="mb-0 pt-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
+              <span class="material-symbols-outlined text-dark-blue fs-18">help</span>
+            </p>
+          </div>
+          <!-- list -->
+          <!-- style in components/_lists.scss -->
+          <ul class="blue-dot-list">
+            <li>
+              Passport
+            </li>
+            <li>
+              Driving licence (photocard only, no paper UK driving licences can be accepted)
+            </li>
+            <li>
+              National identity card
+            </li>
+            <li>
+              HM Forces identity card
+            </li>
+            <li>
+              Student Card (must be current)
+            </li>
+            <li>
+              Employment identification card
+            </li>
+            <li>
+              Disabled drivers blue pass
+            </li>
+          </ul>
         </div>
-        <!-- list -->
-        <!-- style in components/_lists.scss -->
-        <ul class="blue-dot-list">
-          <li>
-            Passport
-          </li>
-          <li>
-            Driving licence (photocard only, no paper UK driving licences can be accepted)
-          </li>
-          <li>
-            National identity card
-          </li>
-          <li>
-            HM Forces identity card
-          </li>
-          <li>
-            Student Card (must be current)
-          </li>
-          <li>
-            Employment identification card
-          </li>
-          <li>
-            Disabled drivers blue pass
-          </li>
-        </ul>
-        <!-- upload input  -->
-        <form action="">
-          <input class="box__file" type="file" name="" id="" />
+        <!-- upload file  -->
+        <!-- style in components/_drag-and-drop-file.scss -->
+        <!-- js in drag-and-drop-file.js  -->
+        <form action="" class="pt-1">
+          <div class="drop-zone-wrap">
+            <!-- drop zone  -->
+            <div class="drop-zone">
+              <!-- image  -->
+              <img class="drop-zone__image d-block mx-auto mb-3" src="assets/img/upload-id.svg" alt="">
+              <!-- text row 1  -->
+              <p class="text-center text-gray font-rubik fs-18 fw-400 mb-3">Drag & Drop your file here </p>
+              <!-- OR  -->
+              <p class="text-center text-accent-blue font-rubik fs-18 fw-400 mb-3 w-100">OR</p>
+              <!-- input  -->
+              <label for="upload-id-input" class="text-center">
+                <input class="drop-zone__input" type="file" name="" id="upload-id-input" />
+                <span class="drop-zone__browse text-accent-blue font-rubik fs-18 fw-400">Browse Files</span>
+                <span class="text-gray font-rubik fs-18 fw-400">on your computer</span>
+              </label>
+            </div>
+            <p class="drop-zone-message font-rubik fw-400 text-gray fs-12 d-flex align-items-center mb-0">
+              * Your file must be below 16 MB. We accept the following formats - gif, jpg, png, pdf and jpeg.
+            </p>
+            <input type="submit" value="Upload" class="font-rubik text-white fs-16 fw-400 bg-dark-blue rounded-6px py-2 px-4 d-none">
+          </div>
+
+        </form>
+      </div>
+      <!-- -------------  -->
+
+      <!-- Proof of address -->
+      <div id="address-proof-wrap" class="px-lg-4 px-0 pt-5 d-flex justify-content-between">
+        <div class="me-3">
+          <!-- title  -->
+          <div class="d-flex justify-content-start align-items-center mb-3">
+            <h1 class="lh-sm fs-18 fw-400 font-roboto text-dark-blue me-2 mb-0">
+              Proof of address
+            </h1>
+            <p class="mb-0 pt-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip text">
+              <span class="material-symbols-outlined text-dark-blue fs-18">help</span>
+            </p>
+          </div>
+          <!-- list -->
+          <!-- style in components/_lists.scss -->
+          <ul class="blue-dot-list">
+            <li>
+              Document must be issued/dated within last 3 months
+            </li>
+            <li>
+              Telephone Bill - excluding mobile Bill
+            </li>
+            <li>
+              Gas, Water, Electricity Bill
+            </li>
+            <li>
+              Mortgage statement
+            </li>
+            <li>
+              Council tax bill
+            </li>
+            <li>
+              Bank statement
+            </li>
+          </ul>
+        </div>
+        <!-- upload file  -->
+        <!-- style in components/_drag-and-drop-file.scss -->
+        <!-- js in drag-and-drop-file.js  -->
+        <form action="" class="pt-1">
+          <div class="drop-zone-wrap">
+            <!-- drop zone  -->
+            <div class="drop-zone">
+              <!-- image  -->
+              <img class="drop-zone__image d-block mx-auto mb-3" src="assets/img/upload-id.svg" alt="">
+              <!-- text row 1  -->
+              <p class="text-center text-gray font-rubik fs-18 fw-400 mb-3">Drag & Drop your file here </p>
+              <!-- OR  -->
+              <p class="text-center text-accent-blue font-rubik fs-18 fw-400 mb-3 w-100">OR</p>
+              <!-- input  -->
+              <label for="upload-address-input" class="text-center">
+                <input class="drop-zone__input" type="file" name="" id="upload-address-input" />
+                <span class="drop-zone__browse text-accent-blue font-rubik fs-18 fw-400">Browse Files</span>
+                <span class="text-gray font-rubik fs-18 fw-400">on your computer</span>
+              </label>
+            </div>
+            <p class="drop-zone-message font-rubik fw-400 text-gray fs-12 d-flex align-items-center mb-0">
+              * Your file must be below 16 MB. We accept the following formats - gif, jpg, png, pdf and jpeg.
+            </p>
+            <input type="submit" value="Upload" class="font-rubik text-white fs-16 fw-400 bg-dark-blue rounded-6px py-2 px-4 d-none">
+          </div>
+
         </form>
       </div>
       <!-- -------------  -->

@@ -7606,6 +7606,10 @@ textarea.form-control-lg {
   font-family: "Roboto", sans-serif !important;
 }
 
+.fs-40 {
+  font-size: 40px !important;
+}
+
 .fs-22 {
   font-size: 22px !important;
 }
@@ -10748,6 +10752,52 @@ body {
   border-radius: 6px;
 }
 
+.drop-zone-wrap {
+  max-width: 360px;
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  row-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.drop-zone-wrap .drop-zone {
+  grid-column: 1/span 2;
+  display: block;
+  padding: 30px 10px;
+  border: 1px dashed #BDBDBD;
+  border-radius: 6px;
+  transition: border 0.5s ease;
+}
+.drop-zone-wrap .drop-zone__image {
+  width: 70px;
+}
+.drop-zone-wrap .drop-zone__input {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0;
+}
+.drop-zone-wrap .drop-zone__browse {
+  position: relative;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.drop-zone-wrap .drop-zone__browse:hover {
+  text-decoration: none;
+}
+.drop-zone-wrap .drop-zone--blue {
+  border-color: #2D9CDB;
+}
+.drop-zone-wrap .drop-zone--red {
+  border-color: #EB5757;
+}
+.drop-zone-wrap input[type=submit] {
+  align-self: start;
+  border: #2C3B58 !important;
+  cursor: pointer;
+}
+
 #body-wrap {
   width: 100vw;
   height: 100vh;
@@ -11989,4 +12039,166 @@ body {
 }
 #help-centre-top-section .help-centre-links .faq-link-box p {
   max-width: 215px;
+}
+
+#contact-us-form {
+  box-shadow: 0px 4px 15px rgba(129, 140, 162, 0.24);
+}
+#contact-us-form input {
+  width: 100%;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  color: #283247;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border 0.5s ease;
+}
+#contact-us-form input:focus {
+  border-color: #2D9CDB;
+}
+#contact-us-form input::-moz-placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+#contact-us-form input:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+#contact-us-form input::placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+#contact-us-form input[type=submit] {
+  background-color: #2C3B58;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+}
+#contact-us-form textarea {
+  width: 100%;
+  height: 170px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  color: #283247;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  resize: none;
+  overflow: auto;
+  transition: border 0.5s ease;
+}
+#contact-us-form textarea:focus {
+  border-color: #2D9CDB;
+}
+#contact-us-form textarea::-moz-placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+#contact-us-form textarea:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+#contact-us-form textarea::placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+#contact-us-form .select-menu {
+  width: 100%;
+  padding: 15px 60px 15px 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: #283247;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../img/angle-down-blue.svg"), linear-gradient(to bottom, white 100%, white 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 30px top 55%, 0 0;
+  background-size: 16px auto, 100%;
+  transition: border 0.5s ease;
+}
+#contact-us-form .select-menu:focus {
+  border-color: #2D9CDB;
+}
+#contact-us-form .select-menu option {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+  font-size: 16px;
+}
+#contact-us-form .select-menu--disabled {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+
+#contact-us-info {
+  box-shadow: 0px 4px 15px rgba(129, 140, 162, 0.24);
+}
+
+#book-meeting-room-step-1 .select-menu {
+  width: 100%;
+  max-width: 770px;
+  padding: 15px 60px 15px 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: #283247;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../img/angle-down-blue.svg"), linear-gradient(to bottom, white 100%, white 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 30px top 55%, 0 0;
+  background-size: 16px auto, 100%;
+  transition: border 0.5s ease;
+}
+#book-meeting-room-step-1 .select-menu:focus {
+  border-color: #2D9CDB;
+}
+#book-meeting-room-step-1 .select-menu option {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+  font-size: 16px;
+}
+#book-meeting-room-step-1 .select-menu--disabled {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+}
+
+#booking-calendar-wrap .booking-calendar .calendar-nav i {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+#booking-calendar-wrap .calendar {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
 }/*# sourceMappingURL=main.css.map */

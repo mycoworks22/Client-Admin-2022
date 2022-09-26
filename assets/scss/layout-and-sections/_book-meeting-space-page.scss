@@ -1,0 +1,68 @@
+#book-meeting-room-step-1{
+  .select-menu{
+    width: 100%;
+    max-width: 770px;
+    padding: 15px 60px 15px 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    font-family: $font-family-rubik;
+    color: $darker-blue;
+
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    background-color: white;
+
+    box-shadow: none;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-image: url("../img/angle-down-blue.svg"),
+            linear-gradient(to bottom, white 100%, white 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right 30px top 55%, 0 0;
+    background-size: 16px auto, 100%;
+
+    transition: border 0.5s ease;
+
+    &:focus {
+      border-color: $accent-blue;
+    }
+
+    option{
+      font-family: $font-family-rubik;
+      color: $gray-blue;
+      font-size: 16px;
+    }
+
+    &--disabled {
+      font-family: $font-family-rubik;
+      color: $gray-blue;
+    }
+  }
+}
+
+
+#booking-calendar-wrap{
+
+  .booking-calendar{
+
+    .calendar-nav{
+      i{
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+      }
+    }
+
+  }
+
+  .calendar{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+  }
+
+}
+

@@ -1,0 +1,54 @@
+.drop-zone-wrap{
+  max-width: 360px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  row-gap: 10px;
+  column-gap: 10px;
+  align-items: center;
+
+  .drop-zone{
+    grid-column: 1 / span 2;
+    display: block;
+    padding: 30px 10px;
+
+    border: 1px dashed #BDBDBD;
+    border-radius: 6px;
+
+    transition: border 0.5s ease;
+
+    &__image{
+      width: 70px;
+    }
+
+    &__input{
+      width: 0 !important;
+      height: 0 !important;
+      opacity: 0;
+    }
+
+    &__browse{
+      position: relative;
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    &--blue{
+      border-color: $accent-blue;
+    }
+
+    &--red{
+      border-color: $red-dark;
+    }
+
+  }
+
+  input[type=submit]{
+    align-self: start;
+    border: $dark-blue !important;
+    cursor: pointer;
+  }
+}

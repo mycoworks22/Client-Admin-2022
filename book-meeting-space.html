@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guides</title>
+  <title>Book Meeting Space</title>
 
   <!-- STYLE SHEETS  -->
   <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
@@ -18,10 +18,13 @@
   <script src="https://kit.fontawesome.com/be3a5a4e18.js?v=1.0" crossorigin="anonymous"></script>
 
   <!-- JS FILES  -->
-  <script src="assets/bootstrap/dist/js/bootstrap.bundle.js" defer></script>
   <script src="assets/js/side-nav.js?v=1.0" defer></script>
   <script src="assets/js/my-modals.js?v=1.0" defer></script>
   <script src="assets/js/new-company-location.js?v=1.0" defer></script>
+  <script src="assets/js/companies-live-search.js?v=1.0" defer></script>
+  <script src="assets/js/companies-status-filter.js?v=1.0" defer></script>
+  <script src="assets/js/select-placeholder.js?v=1.0" defer></script>
+  <script src="assets/js/booking-calendar.js?v=1.0" defer></script>
 
 </head>
 <body>
@@ -146,7 +149,7 @@
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Account</span>
         </a>
       </li>
-      <li class="side-nav-link mb-2">
+      <li class="side-nav-link side-nav-link--active  mb-2">
         <a href="companies.html" class="d-flex align-items-center">
           <span class="side-nav-link__icon material-symbols-outlined c-gray-blue fs-2 m-0">domain</span>
           <span class="side-nav-link__text font-rubik fs-18 fw-300 text-pale-gray ms-3 pt-1">My Companies</span>
@@ -230,79 +233,172 @@
 <!-- CONTENT WRAP  -->
 <!-- style in scss/layout-and-sections/_content-wrap.scss  -->
 <div id="content-wrap" class="bg-pale-blue py-5">
+  <div class="container-fluid pt-5">
+    <div class="row row-max-width">
 
+      <!-- page title  -->
+      <div class="col-12 mb-5">
+        <h1 class="text-dark-blue font-rubik fw-600 fs-40">
+          Book your meeting space in 5 easy steps
+        </h1>
+      </div>
+      <!-- ---  -->
 
-<!-- BACK TO HELP CENTRE and TITLE  -->
-<section class="container-fluid">
-  <div class="row row-max-width">
-    <!-- back  -->
-    <div class="col-12 mb-4">
-      <a href="help-centre.html" class="text-decoration-none text-accent-blue hover-dark-blue d-flex align-items-center">
-        <span class="material-symbols-outlined me-2">keyboard_backspace</span>
-        <span>Back to Help Center</span>
-      </a>
-    </div>
-    <!-- title  -->
-    <div class="col-12 mb-5">
-      <h1 class="text-dark-blue font-rubik fw-600">
-        Guides and Resources
-      </h1>
+      <!-- section 1  -->
+      <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
+      <div class="col-12 mb-5" id="book-meeting-room-step-1">
+        <!-- title  -->
+        <h2 class="text-gray-blue font-rubik fw-400 fs-20 mb-3">
+          1. Choose Company
+        </h2>
+        <!-- select company  -->
+        <!-- placeholder JS in select-placeholder.js  -->
+        <select name="" id="book-meeting-room-company"  class="select-menu select-menu--disabled " onchange="selectPlaceholder('book-meeting-room-company')">
+          <option value="" disabled selected>Select company</option>
+          <option value="">Company Name 1</option>
+          <option value="">Company Name 2</option>
+          <option value="">Company Name 3</option>
+          <option value="">Company Name 4</option>
+          <option value="">Company Name 5</option>
+        </select>
+      </div>
+      <!-- ---  -->
+
+      <!-- section 2  -->
+      <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
+      <div class="col-12" id="book-meeting-room-step-2">
+        <!-- title  -->
+        <h2 class="text-gray-blue font-rubik fw-400 fs-20 mb-3">
+          2. Select the number of people for your available location
+        </h2>
+
+      </div>
+      <!-- ---  -->
+
+      <!-- section 3  -->
+      <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
+      <div class="col-12" id="book-meeting-room-step-3">
+        <!-- title  -->
+        <h2 class="text-gray-blue font-rubik fw-400 fs-20 mb-3">
+          3. Select date and time
+        </h2>
+        <!-- ---  -->
+
+        <!-- booking calendar  -->
+        <div id="booking-calendar-wrap" class="bg-white rounded-6px py-5 px-4">
+          <div class="booking-calendar">
+
+            <!-- prev and next month btns  -->
+            <div class="calendar-nav d-flex justify-content-between align-items-center mb-3">
+              <!-- prev  -->
+              <i class="fas fa-chevron-left text-dark-blue hover-accent-blue fs-18 me-2" id="booking-previous-month" onclick="bookingCalendarPrevMonth()"></i>
+              <!-- month and year  -->
+              <p id="booking-month-year" class="mb-0 text-dark-blue font-rubik fw-400"></p>
+              <!-- next  -->
+              <i class="fas fa-chevron-right text-dark-blue hover-accent-blue fs-18 ms-2" id="booking-next-month" onclick="bookingCalendarNextMonth()"></i>
+            </div>
+
+            <!-- calendar table  -->
+            <table class="calendar" id="booking-calendar">
+              <thead class="calendar__head">
+                <tr>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Sun
+                    </th>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Mon
+                    </th>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Tue
+                    </th>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Wed
+                    </th>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Thu
+                    </th>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Fri
+                    </th>
+                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
+                      Sat
+                    </th>
+                </tr>
+              </thead>
+
+              <tbody class="calendar__body" id="calendar-body"></tbody>
+            </table>
+
+            <!-- select year and month  -->
+            <form class="calendar-select">
+              <p>Jump to:</p>
+              <select class="" name="month" id="booking-select-month" onchange="bookingCalendarJump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>Mar</option>
+                <option value=3>Apr</option>
+                <option value=4>May</option>
+                <option value=5>Jun</option>
+                <option value=6>Jul</option>
+                <option value=7>Aug</option>
+                <option value=8>Sep</option>
+                <option value=9>Oct</option>
+                <option value=10>Nov</option>
+                <option value=11>Dec</option>
+              </select>
+              <select class="" name="year" id="booking-select-year" onchange="bookingCalendarJump()">
+                <option value=1990>1990</option>
+                <option value=1991>1991</option>
+                <option value=1992>1992</option>
+                <option value=1993>1993</option>
+                <option value=1994>1994</option>
+                <option value=1995>1995</option>
+                <option value=1996>1996</option>
+                <option value=1997>1997</option>
+                <option value=1998>1998</option>
+                <option value=1999>1999</option>
+                <option value=2000>2000</option>
+                <option value=2001>2001</option>
+                <option value=2002>2002</option>
+                <option value=2003>2003</option>
+                <option value=2004>2004</option>
+                <option value=2005>2005</option>
+                <option value=2006>2006</option>
+                <option value=2007>2007</option>
+                <option value=2008>2008</option>
+                <option value=2009>2009</option>
+                <option value=2010>2010</option>
+                <option value=2011>2011</option>
+                <option value=2012>2012</option>
+                <option value=2013>2013</option>
+                <option value=2014>2014</option>
+                <option value=2015>2015</option>
+                <option value=2016>2016</option>
+                <option value=2017>2017</option>
+                <option value=2018>2018</option>
+                <option value=2019>2019</option>
+                <option value=2020>2020</option>
+                <option value=2021>2021</option>
+                <option value=2022>2022</option>
+                <option value=2023>2023</option>
+                <option value=2024>2024</option>
+                <option value=2025>2025</option>
+                <option value=2026>2026</option>
+                <option value=2027>2027</option>
+                <option value=2028>2028</option>
+                <option value=2029>2029</option>
+                <option value=2030>2030</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <!-- ---  -->
+
+      </div>
+      <!-- ---  -->
+
     </div>
   </div>
-</section>
-<!-- -------------  -->
-
-<!-- GUIDES LINKS  -->
-<div class="container-fluid">
-  <div class="row row-max-width">
-    <!-- Getting Started -->
-    <div class="col-12 col-xl-6 mb-5">
-      <h5 class="text-gray-blue font-rubik fs-20 fw-400 mb-3">
-        Getting Started
-      </h5>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        What is a Registered Office?
-      </a>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        How does Company Formation Work and Do I need it?
-      </a>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        What is a Registered Office?
-      </a>
-    </div>
-    <!-- Your Account -->
-    <div class="col-12 col-xl-6 mb-5">
-      <h5 class="text-gray-blue font-rubik fs-20 fw-400 mb-3">
-        Your Account
-      </h5>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        Changing your username
-      </a>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        Changing your email
-      </a>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        Changing your profile image
-      </a>
-    </div>
-    <!-- Payments -->
-    <div class="col-12 col-xl-6 mb-5">
-      <h5 class="text-gray-blue font-rubik fs-20 fw-400 mb-3">
-        Payments
-      </h5>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        Discounts
-      </a>
-      <a href="article.html" class="text-accent-blue hover-dark-blue text-decoration-none font-rubik fw-400 fs-18 d-block mb-2">
-        Payment methods
-      </a>
-    </div>
-  </div>
-</div>
-<!-- -------------  -->
-
-
-
 </div>
 <!-- -------------  -->
 
