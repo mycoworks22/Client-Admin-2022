@@ -62,8 +62,22 @@
         cursor: pointer;
       }
     }
-
   }
+
+  @media (max-width: 1200px){
+    .company-box{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr max-content;
+
+      &__col-2{
+        border-left: none;
+        label{
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
 
 #select-company-location{

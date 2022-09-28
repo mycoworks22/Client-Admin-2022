@@ -117,8 +117,38 @@
       color: $gray-blue;
     }
   }
+
+
 }
 
 #contact-us-info{
   box-shadow: 0px 4px 15px rgba(129, 140, 162, 0.24);
+}
+
+@include media-breakpoint-down(sm){
+
+  #contact-us-form{
+    input{
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    input[type=submit]{
+      font-size: 14px;
+    }
+
+    textarea{
+      height: 100px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .select-menu{
+      padding: 10px 45px 10px 15px;
+      font-size: 14px;
+      background-position: right 15px top 55%, 0 0;
+      background-size: 12px auto, 100%;
+    }
+  }
+
 }

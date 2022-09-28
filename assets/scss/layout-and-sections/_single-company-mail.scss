@@ -89,4 +89,27 @@
       }
     }
   }
+
+  @media (max-width: 500px){
+    .company-mail-wrap{
+      grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    }
+
+    .mail{
+      &__download{
+        padding-right: 0 !important;
+      }
+      &__original{
+        border-left:none;
+      }
+    }
+  }
+
+  @media (max-width: 350px){
+    .mail{
+      a{
+        padding: 10px 5px 10px 5px !important;
+      }
+    }
+  }
 }

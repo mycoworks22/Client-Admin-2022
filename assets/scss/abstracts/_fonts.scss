@@ -13,6 +13,7 @@ $font-weight-400: 400;
 $font-weight-300: 300;
 
 $font-size-40: 40px;
+$font-size-28: 28px;
 $font-size-22: 22px;
 $font-size-20: 20px;
 $font-size-18: 18px;
@@ -51,10 +52,12 @@ $utilities: map-merge((
     )
   ),
   "font-size": (
+    responsive: true,
     property: font-size,
     class: fs,
     values: (
       40: $font-size-40,
+      28: $font-size-28,
       22: $font-size-22,
       20: $font-size-20,
       18: $font-size-18,

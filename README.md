@@ -4,37 +4,37 @@
 ![](designs/dashboard.png)
 
 
-### Dashboard page:
+### Dashboard page: -
 #### https://mycoworks22.github.io/Client-Admin-2022/index.html
 
-### Companies page:
+### Companies page: -
 #### https://mycoworks22.github.io/Client-Admin-2022/companies.html
 
-### Single company page:
+### Single company page: -
 #### https://mycoworks22.github.io/Client-Admin-2022/single-company.html
 
-### New company - London:
+### New company - London: -
 #### https://mycoworks22.github.io/Client-Admin-2022/new-company-lnd.html
 
-### Compampany mail:
+### Compampany mail: -
 #### https://mycoworks22.github.io/Client-Admin-2022/single-company-mail.html
 
-### Compampany messages:
+### Compampany messages: -
 #### https://mycoworks22.github.io/Client-Admin-2022/single-company-messages.html
 
-### Compampany deleted messages:
+### Compampany deleted messages: -
 #### https://mycoworks22.github.io/Client-Admin-2022/single-company-messages-deleted.html
 
-### Help center - dashboard:
+### Help center - dashboard: -
 #### https://mycoworks22.github.io/Client-Admin-2022/help-centre.html
 
-### Help center - FAQs:
+### Help center - FAQs: -
 #### https://mycoworks22.github.io/Client-Admin-2022/faqs.html
 
-### Help center - Guides:
+### Help center - Guides: -
 #### https://mycoworks22.github.io/Client-Admin-2022/guides.html
 
-### Help center - Contact Support:
+### Help center - Contact Support: -
 #### https://mycoworks22.github.io/Client-Admin-2022/contact-support.html
 
 ### Article - Guides:

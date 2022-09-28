@@ -44,5 +44,23 @@
     border: 1px solid white;
     border-radius: 6px;
   }
+}
 
+@include media-breakpoint-down(sm){
+  .my-accordion{
+    .accordion-header{
+      padding: 5px 42px 5px 10px;
+
+      .accordion-arrow{
+        right: 10px;
+        top: 19;
+        font-size: 32px;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    .accordion-body{
+      padding: 10px 10px;
+    }
+  }
 }
