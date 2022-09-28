@@ -6,8 +6,8 @@ function newCompanyLocation () {
   const radioIpsw = document.getElementById('new-company-location-ipsw');
 
   if (radioLnd.checked){
-    window.location.replace("/new-company-lnd.html");
-    // window.location.replace("/Client-Admin-2022/new-company-lnd.html");
+    //window.location.replace("/new-company-lnd.html");
+     window.location.replace("/Client-Admin-2022/new-company-lnd.html");
   }
   else if (radioEd.checked){
     window.location.replace("/new-company-ed.html");
