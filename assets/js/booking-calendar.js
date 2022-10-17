@@ -3,12 +3,11 @@ let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
 let selectYear = document.getElementById("booking-select-year");
 let selectMonth = document.getElementById("booking-select-month");
-
+let monthAndYear = document.getElementById("booking-month-year");
 
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 // POPULATE CALENDAR ON LOAD TO SHOW THE CURRENT MONTH
-let monthAndYear = document.getElementById("booking-month-year");
 showCalendar(currentMonth, currentYear);
 
 //NEXT MONTH
@@ -46,33 +45,40 @@ function bookingCalendarJump() {
   showCalendar(currentMonth, currentYear);
 }
 
-//POPULATE CALENDAR TABLE AND OPEN AVAILABLE SLOTS
+// FUNCTION TO DETERMINE HOW MANY DAYS IN A MONTH
+function daysInMonth(month, year) {
+  return 32 - new Date(year, month, 32).getDate();
+}
+
+//POPULATE CALENDAR TABLE
 function showCalendar(targetMonth, targetYear) {
 
-  // what day of the week is the 1st day of the current month on
-  let firstDay = (new Date(targetYear, targetMonth)).getDay();
-
-  // get the calendar table and clear all previous cell data
+  // 1. get the calendar table and clear all previous cell data
   let tbl = document.getElementById("calendar-body"); // body of the calendar
   tbl.innerHTML = "";
 
-  // adjust the calendar title to reflect the current month and date
+  // 2. adjust the calendar title to reflect the current month and date
   monthAndYear.innerHTML = months[targetMonth] + ", " + targetYear;
 
-  // adjust select values to reflect the current month and date
+  // 3. adjust the select values to reflect the current month and date
   selectYear.value = targetYear;
   selectMonth.value = targetMonth;
 
-  // set start of counting for the cells with this month and next month dates
+  // 4. current and next month start on
   let date = 1;
   let nextMonthDate = 1;
 
-  //determine what days of the previous month are visible
+  // 5. what day of the week is the 1st day of the current month on
+  let firstDay = (new Date(targetYear, targetMonth, 1)).getDay();
+
+  // 6. how many days in the current month
+  let currentMonthDays = daysInMonth(targetMonth, targetYear);
+
+  // 7. determine what is the previous month and what year it belongs to
   let selectedYear = parseInt(selectYear.value);
   let selectedMonth = parseInt(selectMonth.value);
   let lastMonth;
   let lastMonthYear;
-  //if statement to determine if previous month is in the same year as the currently selected month
   if(selectedMonth === 0){
     lastMonth = 11;
     lastMonthYear = selectedYear - 1;
@@ -81,95 +87,88 @@ function showCalendar(targetMonth, targetYear) {
     lastMonth = selectedMonth - 1;
     lastMonthYear = selectedYear;
   }
-  let lastMonthDays = new Date(lastMonthYear, lastMonth+1, 0).getDate(); //how many days in prev month
-  let lastMonthDate = lastMonthDays - firstDay + 1; //how many days from last month are visible, what is the first visible date
-  let lastMonthDateStart = lastMonthDate;
 
+  // 7. how many days in the previous month - how many are visible
+  let lastMonthDays = new Date(lastMonthYear, lastMonth+1, 0).getDate();
+  let lastMonthStartDate;
+  let lastMonthVisibleDays;
+  if(firstDay===0){
+    lastMonthStartDate = lastMonthDays - 6;
+    lastMonthVisibleDays = 6;
+  }
+  else{
+    lastMonthStartDate = lastMonthDays - firstDay + 2;
+    lastMonthVisibleDays = firstDay - 1;
+  }
 
-  // creating all cells
-  for (let i = 0; i < 6; i++) {
+  // 9. determine how many weeks are visible
+  let visibleWeeks = Math.ceil((lastMonthDays - lastMonthStartDate + 1 + currentMonthDays) / 7);
+
+  // 10. creating and populate all cells
+  for (let i = 0; i < visibleWeeks; i++) {
+
     // creates a table row
     let row = document.createElement("tr");
 
-    //creating individual cells, filing them up with data.
+    //creates cells and populate them with data
     for (let j = 0; j < 7; j++) {
 
-        // days in prev months
-        if (i === 0 && j < firstDay) {
-              cell = document.createElement("td");
-              cell.className = "days days--last";
-              cellText = document.createTextNode(lastMonthDateStart);
-              cell.appendChild(cellText);
-              row.appendChild(cell);
+      // visible days from the month before
+      if (i === 0 && j < lastMonthVisibleDays) {
+        cell = document.createElement("td");
+        cell.className = "days days--inactive";
+        cellText = document.createTextNode(lastMonthStartDate);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
 
-              lastMonthDateStart++;
+        lastMonthStartDate++;
+      }
+
+      // visible days from the following month
+      else if (date > currentMonthDays) {
+        cell = document.createElement("td");
+        cell.className = "days days--inactive";
+        cellText = document.createTextNode(nextMonthDate);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+        nextMonthDate++;
+      }
+
+      // days in this months
+      else {
+        cell = document.createElement("td");
+        cellText = document.createTextNode(date);
+
+        let whatDay = (new Date(targetYear, targetMonth, date)).getDay();
+
+        // if this day of the month has already passed
+        if(date < today.getDate() && targetYear === today.getFullYear() && targetMonth === today.getMonth()){
+          cell.className = "days days--inactive";
+        }
+        // if weekend day
+        else if(whatDay === 6 || whatDay === 0) {
+          cell.className = "days days--inactive";
+        }
+        // if the date is today
+        else if(date === today.getDate() && targetYear === today.getFullYear() && targetMonth === today.getMonth()) {
+          cell.className = "days days--active days--today";
+        }
+        else{
+          cell.className = "days days--active";
         }
 
-        // days in next month
-        else if (date > daysInMonth(month, year)) {
-          cell = document.createElement("td");
-          cell.className = "days days--next";
-          cellText = document.createTextNode(nextMonthDate);
-          cell.appendChild(cellText);
-          row.appendChild(cell);
-          nextMonthDate++;
-        }
-
-        // days in this months
-        else {
-              cell = document.createElement("td");
-              cellText = document.createTextNode(date);
-              cell.className = "days days--this";
-              // color today's date
-              if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                cell.className = "days days--this days--today";
-              }
-
-              cell.appendChild(cellText);
-              row.appendChild(cell);
-              date++;
-        }
-
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+        date++;
+      }
     }
 
-    tbl.appendChild(row); // appending each row into calendar body.
+    // appending each new row to the calendar body
+    tbl.appendChild(row);
+
   }
 
-   //OPEN AVAILABLE SLOTS
-   let currentMonthDates = document.querySelectorAll(".days--this");
-
-   currentMonthDates.forEach(function (date) {
-
-      date.addEventListener('click', e => {
-         currentMonthDates.forEach(e => e.classList.remove("days--clicked"));
-         date.classList.add("days--clicked");
-
-         let slots = document.querySelector(".calendarSlots");
-         slots.style.display = "flex";
-      })
-
-   });
-}
-
-function daysInMonth(iMonth, iYear) {
-  return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
 
-// SHOW/HIDE BOOKING STAGES
-let stage1 = document.querySelector(".bookingWrap--1");
-let stage2 = document.querySelector(".bookingWrap--2");
-let stage3 = document.querySelector(".bookingWrap--3");
 
-let stage2Btn = document.querySelector("#toBookingStage2");
-let stage3Btn = document.querySelector(".confirmBooking");
-
-stage2Btn.addEventListener('click', e => {
-   stage1.style.display = "none";
-   stage2.style.display = "block";
-})
-
-stage3Btn.addEventListener('click', e => {
-   stage2.style.display = "none";
-   stage3.style.display = "block";
-})

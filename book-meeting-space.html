@@ -234,21 +234,23 @@
 <!-- style in scss/layout-and-sections/_content-wrap.scss  -->
 <div id="content-wrap" class="bg-pale-blue py-5">
   <div class="container-fluid pt-5">
-    <div class="row row-max-width">
 
-      <!-- page title  -->
-      <div class="col-12 mb-5">
+    <!-- page title  -->
+    <div class="row row-max-width mb-5">
+      <div class="col-12">
         <h1 class="text-dark-blue font-rubik fw-600 fs-40">
           Book your meeting space in 5 easy steps
         </h1>
       </div>
-      <!-- ---  -->
+    </div>
+    <!-- ---  -->
 
-      <!-- section 1  -->
-      <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
-      <div class="col-12 mb-5" id="book-meeting-room-step-1">
+    <!-- section 1  -->
+    <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
+    <div class="row row-max-width mb-4">
+      <div class="col-6 mb-5" id="book-meeting-room-step-1">
         <!-- title  -->
-        <h2 class="text-gray-blue font-rubik fw-400 fs-20 mb-3">
+        <h2 class="booking-section-title text-gray-blue font-rubik fw-400 fs-18">
           1. Choose Company
         </h2>
         <!-- select company  -->
@@ -262,25 +264,96 @@
           <option value="">Company Name 5</option>
         </select>
       </div>
-      <!-- ---  -->
+    </div>
+    <!-- ---  -->
+
+    <!-- section 2 & section 3  -->
+    <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
+    <div class="row row-max-width">
 
       <!-- section 2  -->
-      <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
-      <div class="col-12" id="book-meeting-room-step-2">
+      <div class="col-6" id="book-meeting-room-step-2">
         <!-- title  -->
-        <h2 class="text-gray-blue font-rubik fw-400 fs-20 mb-3">
+        <h2 class="booking-section-title text-gray-blue font-rubik fw-400 fs-18">
           2. Select the number of people for your available location
         </h2>
+
+        <!-- meeting room people  -->
+        <div class="meeting-room-people-box bg-white rounded-6px p-2 mb-4">
+          <!-- address  -->
+          <div class="image d-flex justify-content-center align-items-center flex-column px-2 py-3">
+            <p class="text-center text-white font-rubik fw-400">
+              London (West End) Office
+            </p>
+            <p class="text-center text-white font-rubik fs-14 fw-400 mb-0">
+              85 Great Portland Street <br>
+              London, W1W 7LT
+            </p>
+          </div>
+          <!-- info  -->
+          <div class="info py-3">
+            <p class="info__p text-dark-blue font-rubik fs-15 fw-400 pb-4 mb-4">
+              Our 85 Great Portland Street meeting room costs just £12 per hour (+VAT) - 4 space meeting room.
+            </p>
+            <div class="info__people">
+              <p class="text-dark-blue font-rubik fs-15 fw-400 mb-1">
+                Select number of people:
+              </p>
+              <select name="" id="" >
+                <option selected value="4">4 People</option>
+                <option value="6">6 People</option>
+                <option value="8">8 People</option>
+                <option value="10">10 People</option>
+              </select>
+            </div>
+            <div class="info__price text-center text-dark-blue font-rubik fs-15 fw-400 ">
+              Total Cost <br>
+              <span class="fw-500 text-accent-blue fs-28 fw-500">
+                £12
+              </span> <br>
+              an hour +VAT
+            </div>
+            <div class="info__modal-btn pt-4 mt-4">
+              <a href="#" class="text-decoration-none d-flex align-items-center text-dark-blue hover-accent-blue font-rubik fs-15 fw-400">
+                <span class="material-symbols-outlined text-accent-blue me-2 ">map</span>
+                <span>View Map</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- meeting room info box 2  -->
+        <div class="meeting-room-info-box bg-white rounded-6px p-2 ">
+          <!-- address  -->
+          <div class="d-xxl-block d-none image d-flex justify-content-center align-items-center flex-column px-2 py-3">
+          </div>
+          <!-- info  -->
+          <div class="info py-3">
+            <p class="info__h text-dark-blue font-rubik fs-20 fw-500">
+              Your meeting space
+            </p>
+            <p class="text-dark-blue font-rubik fs-15 fw-400 ">
+              Our rooms are the perfect places for your team to meet face-to-face for a brainstorming session, client pitch, collaboration or just a get-together with your team.
+            </p>
+            <div class="info__modal-btn pt-4 mt-4">
+              <a href="#" class="text-decoration-none d-flex align-items-center text-dark-blue hover-accent-blue font-rubik fs-15 fw-400">
+                <span class="material-symbols-outlined text-accent-blue me-2 ">imagesmode</span>
+                <span>View Photos</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
       </div>
       <!-- ---  -->
 
       <!-- section 3  -->
-      <!-- style in scss/layout-and-sections/_book-meeting-space-page.scss -->
-      <div class="col-12" id="book-meeting-room-step-3">
+      <!-- js in booking-calendar.js  -->
+      <div class="col-6" id="book-meeting-room-step-3">
         <!-- title  -->
-        <h2 class="text-gray-blue font-rubik fw-400 fs-20 mb-3">
-          3. Select date and time
+        <h2 class="booking-section-title text-gray-blue font-rubik fw-400 fs-18">
+          3. Select date and time for:
+          <span id="booking-for-company-name" class="fw-500 text-dark-blue">Company name</span>
         </h2>
         <!-- ---  -->
 
@@ -289,7 +362,7 @@
           <div class="booking-calendar">
 
             <!-- prev and next month btns  -->
-            <div class="calendar-nav d-flex justify-content-between align-items-center mb-3">
+            <div id="calendar-nav" class="d-flex justify-content-between align-items-center mb-3">
               <!-- prev  -->
               <i class="fas fa-chevron-left text-dark-blue hover-accent-blue fs-18 me-2" id="booking-previous-month" onclick="bookingCalendarPrevMonth()"></i>
               <!-- month and year  -->
@@ -299,40 +372,42 @@
             </div>
 
             <!-- calendar table  -->
-            <table class="calendar" id="booking-calendar">
-              <thead class="calendar__head">
-                <tr>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Sun
-                    </th>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Mon
-                    </th>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Tue
-                    </th>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Wed
-                    </th>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Thu
-                    </th>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Fri
-                    </th>
-                    <th class="text-center text-white font-rubik fw-400 fs-18 bg-accent-blue rounded-4px py-3 px-2">
-                      Sat
-                    </th>
-                </tr>
-              </thead>
+            <div id="calendar-table-wrap">
+              <table class="calendar-table" id="booking-calendar-body">
+                <thead class="calendar-table__head">
+                  <tr>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Mon
+                      </th>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Tue
+                      </th>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Wed
+                      </th>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Thu
+                      </th>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Fri
+                      </th>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Sat
+                      </th>
+                      <th class="text-center text-white font-rubik fw-500 fs-14 bg-accent-blue py-2">
+                        Sun
+                      </th>
+                  </tr>
+                </thead>
 
-              <tbody class="calendar__body" id="calendar-body"></tbody>
-            </table>
+                <tbody class="calendar-table__body" id="calendar-body"></tbody>
+              </table>
+            </div>
 
             <!-- select year and month  -->
-            <form class="calendar-select">
-              <p>Jump to:</p>
-              <select class="" name="month" id="booking-select-month" onchange="bookingCalendarJump()">
+            <form id="calendar-select" class="d-flex align-items-center mt-1">
+              <p class="text-dark-blue font-rubik fs-14 lh-100 me-2 mb-0">Jump to:</p>
+              <select class="me-2" name="month" id="booking-select-month" onchange="bookingCalendarJump()">
                 <option value=0>Jan</option>
                 <option value=1>Feb</option>
                 <option value=2>Mar</option>
@@ -390,14 +465,68 @@
                 <option value=2030>2030</option>
               </select>
             </form>
+
+            <!-- time slots and continue btn  -->
+            <div id="time-slots-wrap" class="mt-4">
+              <p class="text-dark-blue font-rubik fs-14 fw-400 mb-2">
+                Choose your time:
+              </p>
+              <!-- available slots  -->
+              <form id="available-booking-slots" >
+                <!-- slot 1  -->
+                <div class="booking-slot">
+                  <input type="checkbox" id="timeslot1">
+                  <label class="booking-slot font-inter fs-14 fw-500" for="timeslot1">
+                    09:30 AM - 10:30 AM
+                  </label>
+                </div>
+                <!-- slot 2  -->
+                <div class="booking-slot">
+                  <input type="checkbox" id="timeslot2">
+                  <label class="booking-slot font-inter fs-14 fw-500" for="timeslot2">
+                    11:00 AM - 12:00 PM
+                  </label>
+                </div>
+                <!-- slot 3  -->
+                <div class="booking-slot">
+                  <input type="checkbox" id="timeslot3">
+                  <label class="booking-slot font-inter fs-14 fw-500" for="timeslot3">
+                    12:30 PM - 13:30 PM
+                  </label>
+                </div>
+                <!-- slot 4  -->
+                <div class="booking-slot">
+                  <input type="checkbox" id="timeslot4">
+                  <label class="booking-slot font-inter fs-14 fw-500" for="timeslot4">
+                    14:30 PM - 15:30 PM
+                  </label>
+                </div>
+                <!-- slot 5  -->
+                <div class="booking-slot">
+                  <input type="checkbox" id="timeslot5" disabled>
+                  <label class="booking-slot font-inter fs-14 fw-500" for="timeslot5">
+                    16:00 PM - 17:00 PM
+                  </label>
+                </div>
+              </form>
+
+              <!-- continue  -->
+              <a href="#" class="btns btns--ac-blue btns--lg mt-4 ms-auto">
+                Continue
+              </a>
+            </div>
+
+
           </div>
         </div>
         <!-- ---  -->
+
 
       </div>
       <!-- ---  -->
 
     </div>
+
   </div>
 </div>
 <!-- -------------  -->

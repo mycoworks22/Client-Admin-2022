@@ -1,3 +1,7 @@
+.booking-section-title{
+  min-height: 45px;
+}
+
 #book-meeting-room-step-1{
   .select-menu{
     width: 100%;
@@ -44,25 +48,280 @@
   }
 }
 
+#book-meeting-room-step-2{
 
-#booking-calendar-wrap{
+  .meeting-room-people-box{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    column-gap: 8px;
 
-  .booking-calendar{
+    .image{
+      border-radius: 6px;
+      width: 100%;
+      background-color: $dark-blue;
+      background-image: url("../img/Location-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
-    .calendar-nav{
-      i{
-        cursor: pointer;
-        transition: all 0.3s ease-in;
+    .info{
+      display: grid;
+      grid-template-columns: 1fr max-content;
+      column-gap: 20px;
+
+      &__p{
+        grid-column: 1 / span 2;
+        border-bottom: 1px solid #E7E7E7;
+      }
+
+      &__h{
+        grid-column: 1 / span 2;
+      }
+
+      &__people{
+        select{
+          width: 100%;
+          max-width: 186px;
+          padding: 10px 40px 10px 15px;
+          cursor: pointer;
+          box-sizing: border-box;
+
+          font-family: $font-family-rubik;
+          color: $dark-blue;
+          font-size: 0.875rem;
+
+          border: 1px solid $pale-gray;
+          border-radius: 4px;
+          background-color: white;
+
+          box-shadow: none;
+          outline: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+
+          background-image: url("../img/angle-down-blue.svg"),
+                  linear-gradient(to bottom, white 100%, white 100%);
+          background-repeat: no-repeat, repeat;
+          background-position: right 15px top 55%, 0 0;
+          background-size: 10px auto, 100%;
+
+          transition: border 0.5s ease;
+
+          &:focus {
+            border-color: $accent-blue;
+          }
+
+          option{
+            font-family: $font-family-rubik;
+            color: $gray-blue;
+            font-size: 0.875rem;
+          }
+        }
+      }
+
+      &__modal-btn{
+        grid-column: 1 / span 2;
+        border-top: 1px solid #E7E7E7;
+      }
+    }
+  }
+
+  .meeting-room-info-box{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    column-gap: 8px;
+
+    .image{
+      border-radius: 6px;
+      width: 100%;
+      background-color: $dark-blue;
+      background-image: url("../img/room.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .info{
+      &__modal-btn{
+        border-top: 1px solid #E7E7E7;
+      }
+    }
+  }
+
+  @include media-breakpoint-down (xxl){
+    .meeting-room-people-box{
+      display: grid;
+      grid-template-columns:1fr;
+      row-gap: 10px;
+
+      .image{
+        height: 200px;
       }
     }
 
+    .meeting-room-info-box{
+      display: grid;
+      grid-template-columns:1fr;
+      row-gap: 10px;
+
+      .image{
+        height: 200px;
+      }
+    }
+  }
+}
+
+#booking-calendar-wrap{
+
+  #calendar-nav{
+    i{
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+    }
   }
 
-  .calendar{
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 3px;
+  #calendar-table-wrap{
+    min-height: 280px;
+
+    .calendar-table{
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1px;
+
+      &__head{
+        th{
+          width: 14.28%;
+          border-bottom: 30px solid white;
+        }
+      }
+
+      .days{
+        padding: 10px 5px;
+        text-align: center;
+        font-family: $font-family-rubik;
+        font-size: 0.875rem;
+        line-height: 100%;
+        border-radius: 4px;
+        transition: all 0.2s linear;
+
+        &--active{
+          font-weight: 500;
+          color: $dark-blue;
+          cursor: pointer;
+
+          &:hover{
+            background-color: $pale-blue;
+          }
+        }
+
+        &--inactive{
+          color: $pale-gray;
+          font-weight: 400;
+          cursor: not-allowed;
+        }
+
+        &--today{
+
+        }
+      }
+    }
   }
 
+  #calendar-select{
+    select{
+      max-width: 100%;
+      padding: 10px 40px 10px 15px;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      font-family: $font-family-rubik;
+      color: $dark-blue;
+      font-size: 0.875rem;
+
+      border: 1px solid $pale-blue;
+      border-radius: 4px;
+      background-color: $pale-blue;
+
+      box-shadow: none;
+      outline: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+
+      background-image: url("../img/angle-down-blue.svg"),
+              linear-gradient(to bottom, #F2F5FA 100%, #F2F5FA 100%);
+      background-repeat: no-repeat, repeat;
+      background-position: right 15px top 55%, 0 0;
+      background-size: 10px auto, 100%;
+
+      transition: border 0.5s ease;
+
+      &:focus {
+        border-color: $accent-blue;
+      }
+
+      option{
+        font-family: $font-family-rubik;
+        color: $gray-blue;
+        font-size: 0.875rem;
+      }
+
+    }
+  }
+
+  #available-booking-slots{
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(190px, 1fr) );
+    column-gap: 10px;
+    row-gap: 10px;
+
+    .booking-slot{
+      position: relative;
+
+      label{
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        color: $gray-blue;
+        background-color: #d5d9e3;
+        border-radius: 6px;
+        padding: 10px 20px;
+        border: 1px solid #d5d9e3;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover{
+          border: 1px solid $accent-blue;
+        }
+      }
+
+      input{
+        position: absolute;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      input:checked + label {
+        color: white;
+        background-color: $accent-blue;
+        border: 1px solid $accent-blue;
+      }
+
+      input:disabled + label {
+        cursor: not-allowed;
+        color: $pale-gray;
+        background-color: $pale-blue;
+        border: 1px solid $pale-blue;
+      }
+
+
+    }
+
+  }
 }
 

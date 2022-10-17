@@ -10693,6 +10693,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-decoration: none !important;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -10715,7 +10718,6 @@ body {
 .btns--ac-blue {
   background-color: #2D9CDB;
   color: white;
-  box-shadow: 0px 4px 10px 2px rgba(45, 156, 219, 0.25);
 }
 .btns--ac-blue:hover {
   background-color: #2a90cc;
@@ -10732,7 +10734,6 @@ body {
 .btns--green {
   background-color: #27AE60;
   color: white;
-  box-shadow: 0px 4px 10px rgba(90, 186, 94, 0.2);
 }
 .btns--green:hover {
   background-color: #1a954d;
@@ -10741,7 +10742,6 @@ body {
 .btns--red {
   background-color: #EB5757;
   color: white;
-  box-shadow: 0px 4px 10px rgba(90, 186, 94, 0.2);
 }
 .btns--red:hover {
   background-color: #D93E2D;
@@ -12441,6 +12441,10 @@ body {
     background-size: 12px auto, 100%;
   }
 }
+.booking-section-title {
+  min-height: 45px;
+}
+
 #book-meeting-room-step-1 .select-menu {
   width: 100%;
   max-width: 770px;
@@ -12476,12 +12480,215 @@ body {
   color: #818CA3;
 }
 
-#booking-calendar-wrap .booking-calendar .calendar-nav i {
+#book-meeting-room-step-2 .meeting-room-people-box {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .image {
+  border-radius: 6px;
+  width: 100%;
+  background-color: #2C3B58;
+  background-image: url("../img/Location-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info {
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info__p {
+  grid-column: 1/span 2;
+  border-bottom: 1px solid #E7E7E7;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info__h {
+  grid-column: 1/span 2;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info__people select {
+  width: 100%;
+  max-width: 186px;
+  padding: 10px 40px 10px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: #2C3B58;
+  font-size: 0.875rem;
+  border: 1px solid #CCD2E3;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../img/angle-down-blue.svg"), linear-gradient(to bottom, white 100%, white 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 15px top 55%, 0 0;
+  background-size: 10px auto, 100%;
+  transition: border 0.5s ease;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info__people select:focus {
+  border-color: #2D9CDB;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info__people select option {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+  font-size: 0.875rem;
+}
+#book-meeting-room-step-2 .meeting-room-people-box .info__modal-btn {
+  grid-column: 1/span 2;
+  border-top: 1px solid #E7E7E7;
+}
+#book-meeting-room-step-2 .meeting-room-info-box {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+#book-meeting-room-step-2 .meeting-room-info-box .image {
+  border-radius: 6px;
+  width: 100%;
+  background-color: #2C3B58;
+  background-image: url("../img/room.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#book-meeting-room-step-2 .meeting-room-info-box .info__modal-btn {
+  border-top: 1px solid #E7E7E7;
+}
+@media (max-width: 1399.98px) {
+  #book-meeting-room-step-2 .meeting-room-people-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  #book-meeting-room-step-2 .meeting-room-people-box .image {
+    height: 200px;
+  }
+  #book-meeting-room-step-2 .meeting-room-info-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  #book-meeting-room-step-2 .meeting-room-info-box .image {
+    height: 200px;
+  }
+}
+
+#booking-calendar-wrap #calendar-nav i {
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
-#booking-calendar-wrap .calendar {
+#booking-calendar-wrap #calendar-table-wrap {
+  min-height: 280px;
+}
+#booking-calendar-wrap #calendar-table-wrap .calendar-table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 3px;
+  border-spacing: 1px;
+}
+#booking-calendar-wrap #calendar-table-wrap .calendar-table__head th {
+  width: 14.28%;
+  border-bottom: 30px solid white;
+}
+#booking-calendar-wrap #calendar-table-wrap .calendar-table .days {
+  padding: 10px 5px;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.875rem;
+  line-height: 100%;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+#booking-calendar-wrap #calendar-table-wrap .calendar-table .days--active {
+  font-weight: 500;
+  color: #2C3B58;
+  cursor: pointer;
+}
+#booking-calendar-wrap #calendar-table-wrap .calendar-table .days--active:hover {
+  background-color: #F2F5FA;
+}
+#booking-calendar-wrap #calendar-table-wrap .calendar-table .days--inactive {
+  color: #CCD2E3;
+  font-weight: 400;
+  cursor: not-allowed;
+}
+#booking-calendar-wrap #calendar-select select {
+  max-width: 100%;
+  padding: 10px 40px 10px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: #2C3B58;
+  font-size: 0.875rem;
+  border: 1px solid #F2F5FA;
+  border-radius: 4px;
+  background-color: #F2F5FA;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../img/angle-down-blue.svg"), linear-gradient(to bottom, #F2F5FA 100%, #F2F5FA 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 15px top 55%, 0 0;
+  background-size: 10px auto, 100%;
+  transition: border 0.5s ease;
+}
+#booking-calendar-wrap #calendar-select select:focus {
+  border-color: #2D9CDB;
+}
+#booking-calendar-wrap #calendar-select select option {
+  font-family: "Rubik", sans-serif;
+  color: #818CA3;
+  font-size: 0.875rem;
+}
+#booking-calendar-wrap #available-booking-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+}
+#booking-calendar-wrap #available-booking-slots .booking-slot {
+  position: relative;
+}
+#booking-calendar-wrap #available-booking-slots .booking-slot label {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  color: #818CA3;
+  background-color: #d5d9e3;
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: 1px solid #d5d9e3;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+#booking-calendar-wrap #available-booking-slots .booking-slot label:hover {
+  border: 1px solid #2D9CDB;
+}
+#booking-calendar-wrap #available-booking-slots .booking-slot input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+#booking-calendar-wrap #available-booking-slots .booking-slot input:checked + label {
+  color: white;
+  background-color: #2D9CDB;
+  border: 1px solid #2D9CDB;
+}
+#booking-calendar-wrap #available-booking-slots .booking-slot input:disabled + label {
+  cursor: not-allowed;
+  color: #CCD2E3;
+  background-color: #F2F5FA;
+  border: 1px solid #F2F5FA;
 }/*# sourceMappingURL=main.css.map */
